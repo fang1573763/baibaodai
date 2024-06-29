@@ -1,0 +1,52 @@
+<ad unit-id="广告1"></ad>
+
+<import src="../../template.wxml"></import>
+<view class="topview">效果显示区域</view>
+<view class="canvasBox">
+    <canvas canvasId="myCanvas" class="myCanvas" style="background:{{fontInfo.background.color}}" wx:if="{{!isShowMask}}"></canvas>
+</view>
+<view class="selectSection">
+    <text class="textmag text-bold" >输入内容：</text>
+    <input bindinput="textInput" class="input-content" maxlength="9" placeholder="请输入要生成的内容" value="{{content}}" wx:if="{{!isShowMask||!isShowSave}}"></input>
+</view>
+<view class="selectSection">
+    <text class="textmag">字体大小：</text>
+    <radio-group bindchange="radioChange" class="radio-group">
+        <label class="radio" wx:for="{{fontSize}}" wx:key="i">
+            <icon class="radioIcon {{item.checked?'actIcon':''}}"></icon>
+            <radio checked="{{item.checked}}" value="{{item.name}}"></radio>{{item.value}}
+    </label>
+    </radio-group>
+</view>
+<view class="selectSection">
+    <text class="textmag">背景颜色：</text>
+    <view bindtap="showMask" class="selectBox" data-isback="true">
+        <text>{{fontInfo.background.title}}</text>
+        <icon class="xlIcon"></icon>
+    </view>
+</view>
+<view bindtap="showMask" class="selectSection" data-isback="false">
+    <text class="textmag">字体颜色：</text>
+    <view class="selectBox">
+        <text>{{fontInfo.fontColor.title}}</text>
+        <icon class="xlIcon"></icon>
+    </view>
+</view>
+<button bindtap="transformImg" class="butss">一键转换</button>
+<view class="btnview">
+    <button bindtap="downimg" class="butss" wx:if="{{ldata}}">保存到相册</button>
+    
+</view>
+<view class="ad">
+    <view  wx:if="{{appConfig.ad.wxcustom}}">
+      <ad-custom unit-id="{{appConfig.ad.wxcustom}}" ></ad-custom>
+    </view>
+</view>
+<view class="colorMask" wx:if="{{isShowMask}}">
+    <view class="maskBox">
+        <view bindtap="changeColor" class="maskTxt" data-colortype="{{isBack?'bColors':'fontColors'}}" data-index="{{index}}" wx:for="{{isBack?bColors:fontColors}}">
+            <text>{{item.title}}</text>
+            <icon class="maskIcon {{item.checked?'maskActIcon':''}}"></icon>
+        </view>
+    </view>
+</view>

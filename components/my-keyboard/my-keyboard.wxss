@@ -1,0 +1,139 @@
+.safe-area-inset-bottom.data-v-51ff63fc {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.radius-box.data-v-51ff63fc {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 4rpx 10rpx 0 rgba(0,0,0,.05);
+    margin: 24rpx;
+    overflow: auto;
+    padding: 24rpx;
+}
+
+.radius-box.data-v-51ff63fc:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-title.data-v-51ff63fc {
+    color: #303133;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 24rpx;
+    margin-top: 68rpx;
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+}
+
+.my-keyboard.data-v-51ff63fc {
+    color: #303133;
+    position: relative;
+}
+
+.my-keyboard-grids.data-v-51ff63fc {
+    display: flex;
+}
+
+.my-keyboard-grids .my-keyboard-grids-left.data-v-51ff63fc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 2%;
+    width: 72%;
+}
+
+.my-keyboard-grids .my-keyboard-grids-left .my-keyboard-grids-item.data-v-51ff63fc {
+    align-items: center;
+    border: 2rpx solid #ff4444;
+    border-radius: 48rpx;
+    box-sizing: border-box;
+    color: #ff4444;
+    display: flex;
+    flex: 0 0 30%;
+    flex-direction: row;
+    font-size: 50rpx;
+    font-weight: 700;
+    height: 110rpx;
+    justify-content: center;
+    margin: 12rpx 0;
+    padding: 12rpx;
+    text-align: center;
+}
+
+.my-keyboard-grids .my-keyboard-grids-left .my-keyboard-grids-item.mini.data-v-51ff63fc {
+    height: 100rpx;
+    margin: 6rpx 0;
+}
+
+.my-keyboard-grids .my-keyboard-grids-right.data-v-51ff63fc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.my-keyboard-grids .my-keyboard-grids-right .grids-item.data-v-51ff63fc {
+    border: 2rpx solid transparent;
+    border-radius: 48rpx;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 700;
+    height: 110rpx;
+    line-height: 110rpx;
+    margin: 12rpx 0;
+    padding: 12rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.my-keyboard-grids .my-keyboard-grids-right .grids-item.mini.data-v-51ff63fc {
+    height: 100rpx;
+    margin: 6rpx 0;
+}
+
+.my-keyboard-grids .my-keyboard-grids-right .grids-item.mini.doubleHeight.data-v-51ff63fc {
+    height: 316rpx;
+    line-height: 316rpx;
+}
+
+.my-keyboard-grids .my-keyboard-grids-right .grids-item.doubleHeight.data-v-51ff63fc {
+    align-items: center;
+    display: flex;
+    height: 354rpx;
+    justify-content: center;
+    line-height: 354rpx;
+}
+
+.u-bg-gray.data-v-51ff63fc {
+    background-color: #e4e7ed;
+}
+
+.u-bg-primary.data-v-51ff63fc {
+    background-color: #ff8388;
+}
+
+.my-keyboard-back.data-v-51ff63fc {
+    align-items: center;
+    background-color: #ff4444;
+    display: flex;
+    font-size: 36rpx;
+    justify-content: center;
+}
+
+.my-keyboard-confirm.data-v-51ff63fc {
+    font-size: 48rpx;
+}
+
+.my-keyboard-hover.data-v-51ff63fc {
+    background-color: #ff4444;
+    border-color: #ff4444;
+    color: #fff!important;
+}
+
+.my-keyboard-hover-blue.data-v-51ff63fc {
+    background-color: #85cfce;
+}
+
+.my-keyboard-hover-red.data-v-51ff63fc {
+    background-color: #ec8181;
+}

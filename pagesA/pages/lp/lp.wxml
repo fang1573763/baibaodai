@@ -1,0 +1,16 @@
+<view class="container" style="background-color:{{backgroundColor}}">
+    <view class="text" style="color:{{color}}">
+        <text>{{direction}}</text>
+        <text>{{angle}}°</text>
+    </view>
+    <view bindtap="theme" class="tip">
+   <image src="{{bulb}}"></image> 
+   <view style="text-align: center; color: {{color}}">切换</view>
+    </view>
+    <view class="pic">
+        <image src="{{compass}}" style="transform: rotate({{rotate}}deg);"></image>
+    </view>
+</view>
+
+<ad unit-id="广告2" ad-type="video" ad-theme="white"></ad>
+

@@ -1,0 +1,8 @@
+<view class="u-swiper-indicator data-v-ef32e44a">
+    <view class="{{['u-swiper-indicator__wrapper','data-v-ef32e44a','u-swiper-indicator__wrapper--'+indicatorMode]}}" style="{{'width:'+$root.g0+';'+'background-color:'+indicatorInactiveColor+';'}}" wx:if="{{indicatorMode==='line'}}">
+        <view class="u-swiper-indicator__wrapper--line__bar data-v-ef32e44a" style="{{$root.s0}}"></view>
+    </view>
+    <view class="u-swiper-indicator__wrapper data-v-ef32e44a" wx:if="{{indicatorMode==='dot'}}">
+        <view class="{{['u-swiper-indicator__wrapper__dot','data-v-ef32e44a',index===current&&'u-swiper-indicator__wrapper__dot--active']}}" style="{{item.s1}}" wx:for="{{$root.l0}}" wx:key="index"></view>
+    </view>
+</view>

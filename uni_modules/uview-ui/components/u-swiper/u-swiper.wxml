@@ -1,0 +1,20 @@
+<view class="u-swiper data-v-c8fecb32" style="{{'background-color:'+bgColor+';'+'height:'+$root.g0+';'+'border-radius:'+$root.g1+';'}}">
+    <view class="u-swiper__loading data-v-c8fecb32" wx:if="{{loading}}">
+        <u-loading-icon bind:__l="__l" class="data-v-c8fecb32" mode="circle" vueId="159d1c06-1"></u-loading-icon>
+    </view>
+    <swiper acceleration="{{acceleration}}" autoplay="{{autoplay}}" bindchange="__e" circular="{{circular}}" class="u-swiper__wrapper data-v-c8fecb32" current="{{current}}" currentItemId="{{currentItemId}}" data-event-opts="{{[ [ 'change',[ [ 'change',['$event'] ] ] ] ]}}" displayMultipleItems="{{displayMultipleItems}}" duration="{{duration}}" easingFunction="{{easingFunction}}" interval="{{interval}}" nextMargin="{{$root.g4}}" previousMargin="{{$root.g3}}" style="{{'height:'+$root.g2+';'}}" wx:else>
+        <swiper-item class="u-swiper__wrapper__item data-v-c8fecb32" wx:for="{{$root.l0}}" wx:key="index">
+            <view class="u-swiper__wrapper__item__wrapper data-v-c8fecb32" style="{{item.s0}}">
+                <image bindtap="__e" class="u-swiper__wrapper__item__wrapper__image data-v-c8fecb32" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',[index] ] ] ] ]}}" mode="{{imgMode}}" src="{{item.m0}}" style="{{'height:'+item.g6+';'+'border-radius:'+item.g7+';'}}" wx:if="{{item.g5}}"></image>
+                <video bindtap="__e" class="u-swiper__wrapper__item__wrapper__video data-v-c8fecb32" controls="{{true}}" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',[index] ] ] ] ]}}" enableProgressGesture="{{false}}" id="{{'video-'+index}}" poster="{{item.m2}}" src="{{item.m1}}" style="{{'height:'+item.g9+';'}}" title="{{item.g10?item.$orig.title:''}}" wx:if="{{item.g8}}"></video>
+                <text class="u-swiper__wrapper__item__wrapper__title u-line-1 data-v-c8fecb32" wx:if="{{item.g11}}">{{item.$orig.title}}</text>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="u-swiper__indicator data-v-c8fecb32" style="{{$root.s1}}">
+        <slot name="indicator" wx:if="{{$slots.indicator}}"></slot>
+        <block wx:else>
+            <u-swiper-indicator bind:__l="__l" class="data-v-c8fecb32" current="{{currentIndex}}" indicatorActiveColor="{{indicatorActiveColor}}" indicatorInactiveColor="{{indicatorInactiveColor}}" indicatorMode="{{indicatorMode}}" length="{{list.length}}" vueId="159d1c06-2" wx:if="{{!loading&&indicator&&!showTitle}}"></u-swiper-indicator>
+        </block>
+    </view>
+</view>

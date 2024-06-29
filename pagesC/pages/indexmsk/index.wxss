@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+#canvasOut {
+    position: fixed;
+    left: 10000px;
+}
+
+button {
+    margin: 5rpx;
+}
+
+.instruction {
+    align-items: left;
+    margin-top: 10rpx;
+    color: #ff4444;
+}
+
+.instruction,.makemoney {
+    display: flex;
+    flex-direction: column;
+}
+
+.makemoney {
+    align-items: center;
+    color: #eef7f2;
+    background-color: #e16c96;
+}

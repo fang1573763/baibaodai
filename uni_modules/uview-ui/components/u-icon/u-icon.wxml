@@ -1,0 +1,5 @@
+<view bindtap="__e" class="{{['u-icon','data-v-53601e10','u-icon--'+labelPos]}}" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',['$event'] ] ] ] ]}}">
+    <image class="u-icon__img data-v-53601e10" mode="{{imgMode}}" src="{{name}}" style="{{$root.s0}}" wx:if="{{isImg}}"></image>
+    <text class="{{['u-icon__icon','data-v-53601e10',uClasses]}}" hoverClass="{{hoverClass}}" style="{{$root.s1}}" wx:else>{{icon}}</text>
+    <text class="u-icon__label data-v-53601e10" style="{{'color:'+labelColor+';'+'font-size:'+$root.g0+';'+'margin-left:'+(labelPos=='right'?$root.g1:0)+';'+'margin-top:'+(labelPos=='bottom'?$root.g2:0)+';'+'margin-right:'+(labelPos=='left'?$root.g3:0)+';'+'margin-bottom:'+(labelPos=='top'?$root.g4:0)+';'}}" wx:if="{{label!==''}}">{{label}}</text>
+</view>

@@ -1,0 +1,105 @@
+<view class="detail">
+    <view class="topArea">
+        <view>{{'第 '+$root.m0+1+'/'+randomList.length+' 题'}}</view>
+        <view>
+            <u-button bind:__l="__l" color="#19be6b" customStyle="{{shareBtnCustomStyle}}" hoverClass="share-over" openType="share" plain="{{true}}" size="mini" type="primary" vueId="af4dbfc4-1" vueSlots="{{['default']}}">
+                <u-icon bind:__l="__l" color="#19be6b" name="share-square" size="36rpx" top="2rpx" vueId="{{'af4dbfc4-2'+','+'af4dbfc4-1'}}"></u-icon>分享给同学们</u-button>
+        </view>
+        <view>
+            <text>时间</text>
+            <text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>:<text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>
+        </view>
+    </view>
+    <view class="content radius-box">
+        <view class="item">
+            <block wx:if="{{item.type==1}}">
+                <view class="number">{{item.answerFormat}}</view>
+                <view class="symbol">=</view>
+                <view bindtap="__e" class="{{['result',curIdx==curIdx[0]+','+'result'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'result'] ] ] ] ]}}">{{''+(item.result||'')+''}}</view>
+                <view class="symbol">{{item.unit}}</view>
+            </block>
+            <block wx:else>
+                <view class="number">{{item.res}}</view>
+                <view class="symbol">{{item.unit}}</view>
+                <view class="symbol">=</view>
+                <view bindtap="__e" class="{{['result',curIdx==curIdx[0]+','+'yuan_res'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'yuan_res'] ] ] ] ]}}" wx:if="{{item.yuan!=0}}">{{''+(item.yuan_res||'')+''}}</view>
+                <text class="symbol" wx:if="{{item.yuan!=0}}">元</text>
+                <view bindtap="__e" class="{{['result',curIdx==curIdx[0]+','+'jiao_res'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'jiao_res'] ] ] ] ]}}" wx:if="{{item.jiao!=0}}">{{''+(item.jiao_res||'')+''}}</view>
+                <text class="symbol" wx:if="{{item.jiao!=0}}">角</text>
+                <view bindtap="__e" class="{{['result',curIdx==curIdx[0]+','+'fen_res'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'fen_res'] ] ] ] ]}}" wx:if="{{item.fen!=0}}">{{''+(item.fen_res||'')+''}}</view>
+                <text class="symbol" wx:if="{{item.fen!=0}}">分</text>
+            </block>
+        </view>
+    </view>
+    <view class="my-keyboard radius-box">
+        <my-keyboard bind:__l="__l" bind:backspace="__e" bind:change="__e" bind:confirm="__e" bind:input="__e" cancelText=" " class="vue-ref" confirmText="关闭" data-event-opts="{{[ [ '^change',[ ['onKeyboardChange'] ] ],[ '^backspace',[ ['backspace'] ] ],[ '^confirm',[ ['submit'] ] ],[ '^input',[ [ '__set_model',[ '','showKeyBoard','$event',[] ] ] ] ] ]}}" data-ref="uKeyboard" mask="{{false}}" mode="number" value="{{showKeyBoard}}" vueId="af4dbfc4-3"></my-keyboard>
+    </view>
+    <view class="submit-btn">
+        <view style="margin-bottom:24rpx;margin-top:36rpx;" wx:if="{{isCalc}}">
+            <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['navigateBack'] ] ] ]}}" size="large" type="primary" vueId="af4dbfc4-4" vueSlots="{{['default']}}">返回</u-button>
+        </view>
+        <view style="margin:24rpx 0;" wx:if="{{!isCalc}}">
+            <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ [ 'watchVideo',[2] ] ] ] ]}}" plain="{{true}}" size="large" type="primary" vueId="af4dbfc4-5" vueSlots="{{['default']}}">
+                <text>打印题目和答案</text>
+            </u-button>
+        </view>
+        <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['e0'] ] ] ]}}" size="large" vueId="af4dbfc4-6" vueSlots="{{['default']}}" wx:if="{{isCalc}}">查看答题结果</u-button>
+    </view>
+    <view style="margin:24rpx;">
+        <ad-custom adIntervals="30" bind:__l="__l" unitId="adunit-944204fb5a3e8172" vueId="af4dbfc4-7"></ad-custom>
+    </view>
+    <u-modal bind:__l="__l" bind:close="__e" bind:confirm="__e" closeOnClickOverlay="{{false}}" data-event-opts="{{[ [ '^close',[ ['e1'] ] ],[ '^confirm',[ ['e2'] ] ] ]}}" show="{{showModal}}" showCancelButton="{{false}}" showConfirmButton="{{false}}" title="{{modalTitle}}" titleStyle="{{({color:'#D47AE8'})}}" vueId="af4dbfc4-8" vueSlots="{{['default']}}" zoom="{{false}}">
+        <view class="slot-content" style="width:100%;">
+            <view class="answer-result">
+                <view wx:if="{{$root.m1}}">
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#F4BEEE" name="order" size="44" style="margin-right:8rpx;width:44rpx;" vueId="{{'af4dbfc4-9'+','+'af4dbfc4-8'}}"></u-icon>
+                        <text>{{'得分 ：'+grade+' 分'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#D47AE8" name="list-dot" size="40" style="margin-right:8rpx;width:44rpx;" vueId="{{'af4dbfc4-10'+','+'af4dbfc4-8'}}"></u-icon>
+                        <text>{{'总数 ：'+randomList.length+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#fa3534" name="close" size="32" style="margin-right:8rpx;width:44rpx;" vueId="{{'af4dbfc4-11'+','+'af4dbfc4-8'}}"></u-icon>
+                        <text>{{'答错 ： '+errNo+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#19be6b" name="checkbox-mark" size="38" style="margin-right:8rpx;width:44rpx;" vueId="{{'af4dbfc4-12'+','+'af4dbfc4-8'}}"></u-icon>
+                        <text>{{'答对 ：'+randomList.length-errNo+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#066166" name="hourglass-half-fill" size="44" style="margin-right:8rpx;width:44rpx;" vueId="{{'af4dbfc4-13'+','+'af4dbfc4-8'}}"></u-icon>
+                        <view style="display:inline-block;">
+                            <text>用时 ：</text>
+                            <text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>分<text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>秒</view>
+                    </view>
+                </view>
+                <view style="margin-bottom:24rpx;" wx:else>
+                    <view wx:if="{{curRes}}">
+                        <view style="text-align:center;">
+                            <image src="../../static/good.png" style="width:160rpx;height:160rpx;"></image>
+                        </view>
+                        <view style="text-align:center;color:#D47AE8;">超棒！答对了!</view>
+                    </view>
+                    <view wx:else>
+                        <view style="display:flex;justify-content:center;align-items:center;color:red;font-size:48rpx;font-weight:bold;">
+                            <u-icon bind:__l="__l" color="red" name="close" size="80" vueId="{{'af4dbfc4-14'+','+'af4dbfc4-8'}}"></u-icon>
+                        </view>
+                        <view style="text-align:center;color:red;">同学，答错了哦~</view>
+                    </view>
+                </view>
+                <view style="margin-bottom:24rpx;">
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button" data-event-opts="{{[ [ '^click',[ ['next'] ] ] ]}}" size="large" type="primary" vueId="{{'af4dbfc4-15'+','+'af4dbfc4-8'}}" vueSlots="{{['default']}}" wx:if="{{$root.m2<randomList.length-1}}">下一题</u-button>
+                </view>
+                <u-button bind:__l="__l" bind:click="__e" class="confirm-button" data-event-opts="{{[ [ '^click',[ ['finish'] ] ] ]}}" size="large" type="primary" vueId="{{'af4dbfc4-16'+','+'af4dbfc4-8'}}" vueSlots="{{['default']}}" wx:if="{{$root.m3}}">查看结果</u-button>
+                <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['e3'] ] ] ]}}" size="large" type="primary" vueId="{{'af4dbfc4-17'+','+'af4dbfc4-8'}}" vueSlots="{{['default']}}" wx:if="{{isCalc}}">关闭</u-button>
+                <view style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" openType="share" size="large" type="success" vueId="{{'af4dbfc4-18'+','+'af4dbfc4-8'}}" vueSlots="{{['default']}}">分享给同学</u-button>
+                </view>
+            </view>
+        </view>
+    </u-modal>
+    <canvas canvasId="questionCanvas" class="vue-ref" data-ref="questionCanvas" id="questionCanvas" style="{{'width:'+paperW+'px'+';'+'height:'+paperH+'px'+';'+'position:'+'absolute'+';'+'z-index:'+10057+';'+'left:'+'-99999px'+';'+'top:'+'-99999px'+';'+'background:'+'#fff'+';'}}"></canvas>
+    <canvas canvasId="answerCanvas" class="vue-ref" data-ref="answerCanvas" id="answerCanvas" style="{{'width:'+paperW+'px'+';'+'height:'+paperH+'px'+';'+'position:'+'absolute'+';'+'z-index:'+10057+';'+'left:'+'-99999px'+';'+'top:'+'-99999px'+';'+'background:'+'#fff'+';'}}"></canvas>
+</view>

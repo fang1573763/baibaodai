@@ -1,0 +1,192 @@
+<view class="standing">
+    <view class="topArea">
+        <view>{{'第 '+$root.m0+1+'/'+randomList.length+' 题'}}</view>
+        <view>
+            <u-button bind:__l="__l" color="#19be6b" customStyle="{{shareBtnCustomStyle}}" hoverClass="share-over" openType="share" plain="{{true}}" size="mini" type="primary" vueId="3f669e74-1" vueSlots="{{['default']}}">
+                <u-icon bind:__l="__l" color="#19be6b" name="share-square" size="36rpx" top="2rpx" vueId="{{'3f669e74-2'+','+'3f669e74-1'}}"></u-icon>分享给同学们</u-button>
+        </view>
+        <view>
+            <text>时间</text>
+            <text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>:<text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>
+        </view>
+    </view>
+    <view class="content radius-box">
+        <view class="item" wx:if="{{item}}">
+            <view style="display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;">
+                <view style="width:100%;">
+                    <view class="number mr">
+                        <view class="{{['text',item.first0=='.'?'dot':'']}}">{{item.first0}}</view>
+                        <view class="text" wx:if="{{item.first1}}">{{item.first1}}</view>
+                        <view class="text" wx:if="{{item.first2}}">{{item.first2}}</view>
+                        <view class="{{['text',item.first3=='0'&&(item.first4=='0'||!item.first4)?'zero':'']}}" wx:if="{{item.first3}}">{{item.first3}}</view>
+                        <view class="{{['text',item.first4=='0'&&(item.first5=='0'||!item.first5)?'zero':'']}}" wx:if="{{item.first4}}">{{item.first4}}</view>
+                        <view class="{{['text',item.first5=='0'?'zero':'']}}" wx:if="{{item.first5}}">{{item.first5+''}}</view>
+                    </view>
+                    <view style="{{'position:'+'absolute'+';'+'left:'+'0'+';'}}">{{''+item.symbol+''}}</view>
+                    <view class="number">
+                        <text class="{{['text',item.second0=='.'?'dot':'']}}">{{item.second0}}</text>
+                        <text class="text" wx:if="{{item.second1}}">{{item.second1}}</text>
+                        <text class="text" wx:if="{{item.second2}}">{{item.second2}}</text>
+                        <text class="{{['text',item.second3=='0'&&(item.second4=='0'||!item.second4)?'zero':'']}}" wx:if="{{item.second3}}">{{item.second3}}</text>
+                        <text class="{{['text',item.second4=='0'&&(item.second5=='0'||!item.second5)?'zero':'']}}" wx:if="{{item.second4}}">{{item.second4}}</text>
+                        <text class="{{['text',item.second5=='0'?'zero':'']}}" wx:if="{{item.second5}}">{{item.second5}}</text>
+                    </view>
+                </view>
+                <view style="width:110%;height:2rpx;background:#c0c4cc;margin:12rpx 0;"></view>
+                <view style="display:flex;margin-top:6rpx;width:100%;justify-content:flex-end;" wx:if="{{item.level0&&item.level0!=0}}">
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'0'+','+'L0'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'0'+','+'L0'] ] ] ] ]}}" wx:if="{{item.level0.length>0}}">{{''+(item.L00||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'1'+','+'L0'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'1'+','+'L0'] ] ] ] ]}}" wx:if="{{item.level0.length>1}}">{{''+(item.L01||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'2'+','+'L0'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'2'+','+'L0'] ] ] ] ]}}" wx:if="{{item.level0.length>2}}">{{''+(item.L02||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','target',[curIdx===curIdx[0]+','+'3'+','+'L0'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'3'+','+'L0'] ] ] ] ]}}" wx:if="{{item.level0.length>3}}">{{''+(item.L03||'')+''}}</view>
+                </view>
+                <view style="display:flex;margin-top:12rpx;width:100%;padding-right:152rpx;justify-content:flex-end;" wx:if="{{item.level1&&item.level1!=0}}">
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'0'+','+'L1'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'0'+','+'L1'] ] ] ] ]}}" wx:if="{{item.level1.length>0}}">{{''+(item.L10||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'1'+','+'L1'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'1'+','+'L1'] ] ] ] ]}}" wx:if="{{item.level1.length>1}}">{{''+(item.L11||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'2'+','+'L1'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'2'+','+'L1'] ] ] ] ]}}" wx:if="{{item.level1.length>2}}">{{''+(item.L12||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','target',[curIdx===curIdx[0]+','+'3'+','+'L1'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'3'+','+'L1'] ] ] ] ]}}" wx:if="{{item.level1.length>3}}">{{''+(item.L13||'')+''}}</view>
+                </view>
+                <view style="display:flex;margin-top:12rpx;width:100%;padding-right:300rpx;justify-content:flex-end;" wx:if="{{item.level2&&item.level2!=0}}">
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'0'+','+'L2'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'0'+','+'L2'] ] ] ] ]}}" wx:if="{{item.level2.length>0}}">{{''+(item.L20||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'1'+','+'L2'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'1'+','+'L2'] ] ] ] ]}}" wx:if="{{item.level2.length>1}}">{{''+(item.L21||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'2'+','+'L2'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'2'+','+'L2'] ] ] ] ]}}" wx:if="{{item.level2.length>2}}">{{''+(item.L22||'')+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','target',[curIdx===curIdx[0]+','+'3'+','+'L2'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'3'+','+'L2'] ] ] ] ]}}" wx:if="{{item.level2.length>3}}">{{''+(item.L23||'')+''}}</view>
+                </view>
+                <view style="width:110%;height:2rpx;background:#c0c4cc;margin:12rpx 0;" wx:if="{{item.level1}}"></view>
+                <view style="display:flex;margin-top:12rpx;width:100%;justify-content:flex-end;">
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'0'+','+'result'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'0'+','+'result'] ] ] ] ]}}" wx:if="{{item.result0!=undefined}}">{{''+item.result0+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'1'+','+'result'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'1'+','+'result'] ] ] ] ]}}" wx:if="{{item.result1!=undefined}}">{{''+item.result1+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'2'+','+'result'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'2'+','+'result'] ] ] ] ]}}" wx:if="{{item.result2!=undefined}}">{{''+item.result2+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'3'+','+'result'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'3'+','+'result'] ] ] ] ]}}" wx:if="{{item.result3!=undefined}}">{{''+item.result3+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','mr','target',[curIdx===curIdx[0]+','+'4'+','+'result'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'4'+','+'result'] ] ] ] ]}}" wx:if="{{item.result4!=undefined}}">{{''+item.result4+''}}</view>
+                    <view bindtap="__e" class="{{[ 'result','target',[curIdx===curIdx[0]+','+'5'+','+'result'?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx[0]+','+'5'+','+'result'] ] ] ] ]}}" wx:if="{{item.result5!=undefined}}">{{''+item.result5+''}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="my-keyboard radius-box">
+        <my-keyboard bind:__l="__l" bind:backspace="__e" bind:change="__e" bind:confirm="__e" bind:input="__e" cancelText=" " class="vue-ref" confirmText="关闭" data-event-opts="{{[ [ '^change',[ ['onKeyboardChange'] ] ],[ '^backspace',[ ['backspace'] ] ],[ '^confirm',[ ['submit'] ] ],[ '^input',[ [ '__set_model',[ '','showKeyBoard','$event',[] ] ] ] ] ]}}" data-ref="uKeyboard" mask="{{false}}" mode="number" value="{{showKeyBoard}}" vueId="3f669e74-3"></my-keyboard>
+    </view>
+    <view class="submit-btn">
+        <view style="margin-bottom:24rpx;margin-top:36rpx;" wx:if="{{isCalc}}">
+            <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['navigateBack'] ] ] ]}}" size="large" type="primary" vueId="3f669e74-4" vueSlots="{{['default']}}">返回</u-button>
+        </view>
+        <view style="margin:24rpx 0;">
+            <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ [ 'watchVideo',[2] ] ] ] ]}}" plain="{{true}}" size="large" type="primary" vueId="3f669e74-5" vueSlots="{{['default']}}">
+                <text>打印题目和答案</text>
+            </u-button>
+        </view>
+        <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['e0'] ] ] ]}}" size="large" vueId="3f669e74-6" vueSlots="{{['default']}}" wx:if="{{isCalc}}">查看答题结果</u-button>
+    </view>
+    <view style="margin:24rpx;">
+        <ad-custom adIntervals="30" bind:__l="__l" unitId="adunit-944204fb5a3e8172" vueId="3f669e74-7"></ad-custom>
+    </view>
+    <u-popup bind:__l="__l" bind:close="__e" bind:open="__e" closeOnClickOverlay="{{true}}" closeable="{{true}}" customStyle="{{popupCustomStyle}}" data-event-opts="{{[ [ '^close',[ ['closeAnswerModal'] ] ],[ '^open',[ ['openAnswerModal'] ] ] ]}}" mode="bottom" overlay="{{false}}" round="{{10}}" safeAreaInsetBottom="{{true}}" show="{{showAnswerModal}}" vueId="3f669e74-8" vueSlots="{{['default']}}">
+        <view class="modal-title">查看答案</view>
+        <view class="list modal-list">
+            <view class="{{[ 'item',[idx===randomList.length-1?'last-item':''] ]}}" wx:for="{{randomList}}" wx:for-index="idx" wx:key="idx">
+                <view class="index">{{idx+1+'.'}}</view>
+                <view style="display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;">
+                    <view style="width:100%;">
+                        <view class="number mr">
+                            <view class="{{['text',item.first0=='.'?'dot':'']}}">{{item.first0}}</view>
+                            <view class="text" wx:if="{{item.first1}}">{{item.first1}}</view>
+                            <view class="text" wx:if="{{item.first2}}">{{item.first2}}</view>
+                            <view class="{{['text',item.first3=='0'&&(item.first4=='0'||!item.first4)?'zero':'']}}" wx:if="{{item.first3}}">{{''+item.first3+''}}</view>
+                            <view class="{{['text',item.first4=='0'&&(item.first5=='0'||!item.first5)?'zero':'']}}" wx:if="{{item.first4}}">{{''+item.first4+''}}</view>
+                            <view class="{{['text',item.first5=='0'?'zero':'']}}" wx:if="{{item.first5}}">{{item.first5+''}}</view>
+                        </view>
+                        <view style="{{'position:'+'absolute'+';'+'left:'+'0'+';'}}">{{''+item.symbol+''}}</view>
+                        <view class="number">
+                            <text class="{{['text',item.second0=='.'?'dot':'']}}">{{item.second0}}</text>
+                            <text class="text" wx:if="{{item.second1}}">{{item.second1}}</text>
+                            <text class="text" wx:if="{{item.second2}}">{{item.second2}}</text>
+                            <text class="{{['text',item.second3=='0'&&(item.second4=='0'||!item.second4)?'zero':'']}}" wx:if="{{item.second3}}">{{item.second3}}</text>
+                            <text class="{{['text',item.second4=='0'&&(item.second5=='0'||!item.second5)?'zero':'']}}" wx:if="{{item.second4}}">{{item.second4}}</text>
+                            <text class="{{['text',item.second5=='0'?'zero':'']}}" wx:if="{{item.second5}}">{{item.second5}}</text>
+                        </view>
+                    </view>
+                    <view style="width:110%;height:2rpx;background:#c0c4cc;margin:12rpx 0;"></view>
+                    <view style="display:flex;margin-top:6rpx;width:100%;justify-content:flex-end;" wx:if="{{item.level0&&item.level0!=0}}">
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'0'+','+'L0'] ] ] ] ]}}" wx:if="{{item.level0.length>0}}">{{''+(item.level0[0]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'1'+','+'L0'] ] ] ] ]}}" wx:if="{{item.level0.length>1}}">{{''+(item.level0[1]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'2'+','+'L0'] ] ] ] ]}}" wx:if="{{item.level0.length>2}}">{{''+(item.level0[2]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'3'+','+'L0'] ] ] ] ]}}" wx:if="{{item.level0.length>3}}">{{''+(item.level0[3]||'')+''}}</view>
+                    </view>
+                    <view style="display:flex;margin-top:12rpx;width:100%;padding-right:152rpx;justify-content:flex-end;" wx:if="{{item.level1&&item.level1!=0}}">
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'0'+','+'L1'] ] ] ] ]}}" wx:if="{{item.level1.length>0}}">{{''+(item.level1[0]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'1'+','+'L1'] ] ] ] ]}}" wx:if="{{item.level1.length>1}}">{{''+(item.level1[1]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'2'+','+'L1'] ] ] ] ]}}" wx:if="{{item.level1.length>2}}">{{''+(item.level1[2]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'3'+','+'L1'] ] ] ] ]}}" wx:if="{{item.level1.length>3}}">{{''+(item.level1[3]||'')+''}}</view>
+                    </view>
+                    <view style="display:flex;margin-top:12rpx;width:100%;padding-right:300rpx;justify-content:flex-end;" wx:if="{{item.level2&&item.level2!=0}}">
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'0'+','+'L2'] ] ] ] ]}}" wx:if="{{item.level2.length>0}}">{{''+(item.level2[0]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'1'+','+'L2'] ] ] ] ]}}" wx:if="{{item.level2.length>1}}">{{''+(item.level2[1]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'2'+','+'L2'] ] ] ] ]}}" wx:if="{{item.level2.length>2}}">{{''+(item.level2[2]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'3'+','+'L2'] ] ] ] ]}}" wx:if="{{item.level2.length>3}}">{{''+(item.level2[3]||'')+''}}</view>
+                    </view>
+                    <view style="width:110%;height:2rpx;background:#c0c4cc;margin:12rpx 0;" wx:if="{{item.level1}}"></view>
+                    <view style="display:flex;margin-top:12rpx;width:100%;justify-content:flex-end;">
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'0'+','+'result'] ] ] ] ]}}" wx:if="{{item.result0!=undefined}}">{{''+(item.answer[0]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'1'+','+'result'] ] ] ] ]}}" wx:if="{{item.result1!=undefined}}">{{''+(item.answer[1]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'2'+','+'result'] ] ] ] ]}}" wx:if="{{item.result2!=undefined}}">{{''+(item.answer[2]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'3'+','+'result'] ] ] ] ]}}" wx:if="{{item.result3!=undefined}}">{{''+(item.answer[3]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','mr','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'4'+','+'result'] ] ] ] ]}}" wx:if="{{item.result4!=undefined}}">{{''+(item.answer[4]||'')+''}}</view>
+                        <view bindtap="__e" class="{{['result','target active']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[idx+','+'5'+','+'result'] ] ] ] ]}}" wx:if="{{item.result5!=undefined}}">{{''+(item.answer[5]||'')+''}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </u-popup>
+    <u-modal bind:__l="__l" bind:close="__e" bind:confirm="__e" closeOnClickOverlay="{{false}}" data-event-opts="{{[ [ '^close',[ ['e1'] ] ],[ '^confirm',[ ['e2'] ] ] ]}}" show="{{showModal}}" showCancelButton="{{false}}" showConfirmButton="{{false}}" title="{{modalTitle}}" titleStyle="{{({color:'#D47AE8'})}}" vueId="3f669e74-9" vueSlots="{{['default']}}" zoom="{{false}}">
+        <view class="slot-content" style="width:100%;">
+            <view class="answer-result">
+                <view wx:if="{{curIdx[0]==randomList.length-1&&isCalc}}">
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#F4BEEE" name="order" size="44" style="margin-right:8rpx;width:44rpx;" vueId="{{'3f669e74-10'+','+'3f669e74-9'}}"></u-icon>
+                        <text>{{'得分 ：'+grade+' 分'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#D47AE8" name="list-dot" size="40" style="margin-right:8rpx;width:44rpx;" vueId="{{'3f669e74-11'+','+'3f669e74-9'}}"></u-icon>
+                        <text>{{'总数 ：'+randomList.length+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#fa3534" name="close" size="32" style="margin-right:8rpx;width:44rpx;" vueId="{{'3f669e74-12'+','+'3f669e74-9'}}"></u-icon>
+                        <text>{{'答错 ： '+errNo+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#19be6b" name="checkbox-mark" size="38" style="margin-right:8rpx;width:44rpx;" vueId="{{'3f669e74-13'+','+'3f669e74-9'}}"></u-icon>
+                        <text>{{'答对 ：'+randomList.length-errNo+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#066166" name="hourglass-half-fill" size="44" style="margin-right:8rpx;width:44rpx;" vueId="{{'3f669e74-14'+','+'3f669e74-9'}}"></u-icon>
+                        <view style="display:inline-block;">
+                            <text>用时 ：</text>
+                            <text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>分<text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>秒</view>
+                    </view>
+                </view>
+                <view style="margin-bottom:24rpx;" wx:else>
+                    <view wx:if="{{curRes}}">
+                        <view style="text-align:center;">
+                            <image src="../../static/good.png" style="width:160rpx;height:160rpx;"></image>
+                        </view>
+                        <view style="text-align:center;color:#D47AE8;">超棒！答对了!</view>
+                    </view>
+                    <view wx:else>
+                        <view style="display:flex;justify-content:center;align-items:center;color:red;font-size:48rpx;font-weight:bold;">
+                            <u-icon bind:__l="__l" color="red" name="close" size="80" vueId="{{'3f669e74-15'+','+'3f669e74-9'}}"></u-icon>
+                        </view>
+                        <view style="text-align:center;color:red;">同学，答错了哦~</view>
+                    </view>
+                </view>
+                <u-button bind:__l="__l" bind:click="__e" class="confirm-button" data-event-opts="{{[ [ '^click',[ ['next'] ] ] ]}}" size="large" type="primary" vueId="{{'3f669e74-16'+','+'3f669e74-9'}}" vueSlots="{{['default']}}" wx:if="{{$root.m1<randomList.length-1}}">下一题</u-button>
+                <u-button bind:__l="__l" bind:click="__e" class="confirm-button" data-event-opts="{{[ [ '^click',[ ['finish'] ] ] ]}}" size="large" type="primary" vueId="{{'3f669e74-17'+','+'3f669e74-9'}}" vueSlots="{{['default']}}" wx:if="{{$root.m2}}">查看结果</u-button>
+                <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['e3'] ] ] ]}}" size="large" type="primary" vueId="{{'3f669e74-18'+','+'3f669e74-9'}}" vueSlots="{{['default']}}" wx:if="{{isCalc}}">关闭</u-button>
+                <view style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" openType="share" size="large" type="success" vueId="{{'3f669e74-19'+','+'3f669e74-9'}}" vueSlots="{{['default']}}">分享给同学</u-button>
+                </view>
+            </view>
+        </view>
+    </u-modal>
+    <canvas canvasId="questionCanvas" class="vue-ref" data-ref="questionCanvas" id="questionCanvas" style="{{'width:'+paperW+'px'+';'+'height:'+paperH+'px'+';'+'position:'+'absolute'+';'+'z-index:'+10057+';'+'left:'+'-99999px'+';'+'top:'+'-99999px'+';'+'background:'+'#fff'+';'}}"></canvas>
+    <canvas canvasId="answerCanvas" class="vue-ref" data-ref="answerCanvas" id="answerCanvas" style="{{'width:'+paperW+'px'+';'+'height:'+paperH+'px'+';'+'position:'+'absolute'+';'+'z-index:'+10057+';'+'left:'+'-99999px'+';'+'top:'+'-99999px'+';'+'background:'+'#fff'+';'}}"></canvas>
+</view>

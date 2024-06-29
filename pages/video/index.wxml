@@ -1,0 +1,114 @@
+
+<!--轮播图 -->
+<!-- <view class='swiperBanner'>
+    <swiper indicator-dots='false' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' circular='{{circular}}' indicator-active-color='#ff4444'>
+      <swiper-item  wx:for="{{imgUrls}}" wx:key='index'>
+        <navigator   appId="{{item.appid}}" path='{{item.link}}' hover-class="none" open-type="navigate"target="miniProgram" >
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"></image>
+        </navigator> 
+      </swiper-item>
+    </swiper>
+  </view> -->
+<!--工具-->
+
+<view class="container">
+  <ad unit-id="广告1"></ad>
+    <view class="navbar-header"></view>
+    <view bindtap="tipKeFuMsg" class="gonggao">
+        <i-notice-bar loop speed="2000" wx:if="{{description}}">
+      {{description}}
+    </i-notice-bar>
+    </view>
+<text class="note" style="color: rgb(3, 3, 3);width: 90%;margin-top: 15rpx;">支持列表：</text>
+
+<scroll-view class="srcolbox" scroll-x	 scroll-with-animation='true'>
+ 
+
+ <view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/qm.png"></image></view>
+ <view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/huoshan.png"></image></view>
+ <view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/xinpianchang.png"></image></view>
+ <view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/6cn.png"></image> </view>
+ <view class="item"> <image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/xiaokaxiu.jpg"></image> </view>
+ <view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/hanyuhl.png"></image></view>
+ <view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/pearvideo.png"></image></view>
+ 
+ 
+</scroll-view>
+
+<scroll-view class="srcolbox" scroll-x	 scroll-with-animation='true'>
+
+<view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/pipixia.png"></image> </view>
+<view class="item"> <image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/weishi.png"></image> </view>
+<view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/douyin.png"></image></view>
+<view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/kuaishou.png"></image></view>
+<view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/xigua.jpg"></image></view>
+<view class="item"><image class="ym-img" src="https://qsy.jinjinyl.cn/public/static/home/assets/images/zuiyou.png"></image> </view>
+<view class="item"> <image class="ym-img" src="/static/30.png"></image> </view>
+
+
+</scroll-view>
+
+   <view class="in">
+        <view class="input-container">
+            <input bindinput="inputChange" maxlength="-1" placeholder="请输入短视频链接" value="{{analysisUrl}}"></input>
+            <view bindtap="analysisTap">提取</view>
+        </view>
+    </view>
+    <text class="note" style="color: rgb(190, 184, 184);width: 90%;margin-top: 15rpx;">提示：系统升级可直接在线原画质保存，如果下载时间过程请耐心等待</text>
+    <view class="op-container">
+        <view bindtap="pasteTap" class="paste">粘贴地址</view>
+        <view bindtap="clearTap" class="clear">清空地址</view>
+    </view>
+
+
+
+
+
+
+    <view class="video-container">
+        <video class="result-video" hidden="{{hideResult}}" src="{{videoUrl}}"></video>
+    </view>
+    <view class="video-container">
+        <view class="desc-container" wx:if="{{desc}}">
+            <text class="desc">{{desc}}</text>
+            <view bindtap="copyDescTap" class="copy-desc">
+                <text>复制
+          文案
+        </text>
+            </view>
+        </view>
+    </view>
+    <view class="video-container">
+        <view class="result-container" hidden="{{hideResult}}">
+
+<!-- 程序内设下载开启激励广告，bindtap="saveTap"代表关闭  bindtap="goad"代表开启  若未开通流量主开启无效 -->
+            <view bindtap="saveTap" class="save">
+                
+        下载视频
+      </view>
+            <view bindtap="copyLinkTap" class="copy">
+                
+        复制链接
+      </view>
+        </view>
+    </view>
+    <view class="navbar-header"></view>
+   
+</view>
+<view class="wra">
+<view class="awrapper ashareWrap">
+	<view class="containa">
+		<view class="wrap">
+			<view class="icon">
+				<image class="iconImg" lazyLoad="true" mode="aspectFill" src="/static/icon-do-light.png"></image>
+			</view>
+			<view class="text">分享本程序给您好友，共同解锁有趣的短视频。</view>
+			<button class="button-share reButton" data-from="{{shareFrom.INVITE}}" openType="share">
+				<view class="text" style="color: #fff;">分享</view>
+			</button>
+		</view>
+	</view>
+</view>
+</view>
+
+

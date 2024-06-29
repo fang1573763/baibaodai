@@ -1,0 +1,11 @@
+<button appParameter="{{appParameter}}" binderror="__e" bindgetphonenumber="__e" bindgetuserinfo="__e" bindlaunchapp="__e" bindopensetting="__e" bindtap="__e" class="{{['u-button','u-reset-button','data-v-ce395d1e',bemClass]}}" data-event-opts="{{[ [ 'getphonenumber',[ [ 'getphonenumber',['$event'] ] ] ],[ 'getuserinfo',[ [ 'getuserinfo',['$event'] ] ] ],[ 'error',[ [ 'error',['$event'] ] ] ],[ 'opensetting',[ [ 'opensetting',['$event'] ] ] ],[ 'launchapp',[ [ 'launchapp',['$event'] ] ] ],[ 'tap',[ [ 'clickHandler',['$event'] ] ] ] ]}}" data-name="{{dataName}}" formType="{{formType}}" hoverClass="{{!disabled&&!loading?'u-button--active':''}}" hoverStartTime="{{$root.m0}}" hoverStayTime="{{$root.m1}}" hoverStopPropagation="{{hoverStopPropagation}}" lang="{{lang}}" openType="{{openType}}" sendMessageImg="{{sendMessageImg}}" sendMessagePath="{{sendMessagePath}}" sendMessageTitle="{{sendMessageTitle}}" sessionFrom="{{sessionFrom}}" showMessageCard="{{showMessageCard}}" style="{{$root.s0}}">
+    <block wx:if="{{loading}}">
+        <u-loading-icon bind:__l="__l" class="data-v-ce395d1e" color="{{loadingColor}}" mode="{{loadingMode}}" size="{{textSize*1.15}}" vueId="522c48bd-1"></u-loading-icon>
+        <text class="u-button__loading-text data-v-ce395d1e" style="{{'font-size:'+textSize+'px'+';'}}">{{loadingText||text}}</text>
+    </block>
+    <block wx:else>
+        <u-icon bind:__l="__l" class="data-v-ce395d1e" color="{{iconColorCom}}" customStyle="{{({marginRight:'2px'})}}" name="{{icon}}" size="{{textSize*1.35}}" vueId="522c48bd-2" wx:if="{{icon}}"></u-icon>
+        <slot wx:if="{{$slots.default}}"></slot>
+        <text class="u-button__text data-v-ce395d1e" style="{{'font-size:'+textSize+'px'+';'}}" wx:else>{{text}}</text>
+    </block>
+</button>

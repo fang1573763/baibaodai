@@ -1,0 +1,17 @@
+<view class="u-tabs data-v-e00ebf8c">
+    <view class="u-tabs__wrapper data-v-e00ebf8c">
+        <slot name="left"></slot>
+        <view class="u-tabs__wrapper__scroll-view-wrapper data-v-e00ebf8c">
+            <scroll-view class="u-tabs__wrapper__scroll-view data-v-e00ebf8c vue-ref" data-ref="u-tabs__wrapper__scroll-view" scrollLeft="{{scrollLeft}}" scrollWithAnimation="{{true}}" scrollX="{{scrollable}}" showScrollbar="{{false}}">
+                <view class="u-tabs__wrapper__nav data-v-e00ebf8c vue-ref" data-ref="u-tabs__wrapper__nav">
+                    <view bindtap="__e" class="{{['u-tabs__wrapper__nav__item','data-v-e00ebf8c','vue-ref-in-for','u-tabs__wrapper__nav__item-'+index,item.$orig.disabled&&'u-tabs__wrapper__nav__item--disabled']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',['$0',index],[ [ ['list','',index] ] ] ] ] ] ]}}" data-ref="{{'u-tabs__wrapper__nav__item-'+index}}" style="{{$root.s0}}" wx:for="{{$root.l0}}" wx:key="index">
+                        <text class="{{['u-tabs__wrapper__nav__item__text','data-v-e00ebf8c',item.$orig.disabled&&'u-tabs__wrapper__nav__item__text--disabled']}}" style="{{item.s1}}">{{item.$orig[keyName]}}</text>
+                        <u-badge bgColor="{{item.$orig.badge&&item.$orig.badge.bgColor||propsBadge.bgColor}}" bind:__l="__l" class="data-v-e00ebf8c" color="{{item.$orig.badge&&item.$orig.badge.color||propsBadge.color}}" customStyle="margin-left: 4px;" inverted="{{item.$orig.badge&&item.$orig.badge.inverted||propsBadge.inverted}}" isDot="{{item.$orig.badge&&item.$orig.badge.isDot||propsBadge.isDot}}" max="{{item.$orig.badge&&item.$orig.badge.max||propsBadge.max}}" numberType="{{item.$orig.badge&&item.$orig.badge.numberType||propsBadge.numberType}}" shape="{{item.$orig.badge&&item.$orig.badge.shape||propsBadge.shape}}" show="{{!!( item.$orig.badge&&(item.$orig.badge.show||item.$orig.badge.isDot||item.$orig.badge.value) )}}" showZero="{{item.$orig.badge&&item.$orig.badge.showZero||propsBadge.showZero}}" type="{{item.$orig.badge&&item.$orig.badge.type||propsBadge.type}}" value="{{item.$orig.badge&&item.$orig.badge.value||propsBadge.value}}" vueId="{{'77f21006-1-'+index}}"></u-badge>
+                    </view>
+                    <view class="u-tabs__wrapper__nav__line data-v-e00ebf8c vue-ref" data-ref="u-tabs__wrapper__nav__line" style="{{'width:'+$root.g0+';'+'transform:'+'translate('+lineOffsetLeft+'px)'+';'+'transition-duration:'+(firstTime?0:duration)+'ms'+';'+'height:'+$root.g1+';'+'background-color:'+lineColor+';'}}"></view>
+                </view>
+            </scroll-view>
+        </view>
+        <slot name="right"></slot>
+    </view>
+</view>

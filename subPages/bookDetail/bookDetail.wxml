@@ -1,0 +1,11 @@
+<view class="bookDetail data-v-2c28a0d9">
+    <u-alert bind:__l="__l" center="{{true}}" class="data-v-2c28a0d9" fontSize="14" title="左右滑动可以翻页,如果太小看不清,点击可以放大看" type="info" vueId="425bb518-1"></u-alert>
+    <u-swiper autoplay="{{false}}" bind:__l="__l" bind:change="__e" bind:click="__e" class="data-v-2c28a0d9" data-event-opts="{{[ [ '^change',[ ['e0'] ] ],[ '^click',[ ['onPreview'] ] ] ]}}" height="70vh" imgMode="aspectFit" indicatorStyle="right: 20px" list="{{pages}}" vueId="425bb518-2" vueSlots="{{['indicator']}}">
+        <view class="indicator-num data-v-2c28a0d9" slot="indicator">
+            <text class="indicator-num__text data-v-2c28a0d9">{{currentNum+1+'/'+pages.length}}</text>
+        </view>
+    </u-swiper>
+    <view class="data-v-2c28a0d9" style="margin:24rpx;">
+        <ad adIntervals="30" class="data-v-2c28a0d9" unitId="adunit-cefc8036ba2faea0"></ad>
+    </view>
+</view>

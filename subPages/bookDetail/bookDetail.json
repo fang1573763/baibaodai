@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "u-alert": "/uni_modules/uview-ui/components/u-alert/u-alert",
+        "u-swiper": "/uni_modules/uview-ui/components/u-swiper/u-swiper"
+    }
+}

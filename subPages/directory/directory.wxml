@@ -1,0 +1,15 @@
+<view class="directory data-v-24adfac5">
+    <view bindtap="__e" class="item u-border-bottom data-v-24adfac5" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['$0'],[ [ ['books','unit_name',b.$orig.unit_name] ] ] ] ] ] ]}}" hoverClass="u-hover-class" wx:for="{{$root.l0}}" wx:for-index="idx" wx:for-item="b" wx:key="unit_name">
+        <view class="name data-v-24adfac5">{{b.$orig.unit_name}}</view>
+        <view class="desc data-v-24adfac5">{{idx>1?'P('+b.g0+')':''}}</view>
+    </view>
+    <view class="data-v-24adfac5" style="margin:24rpx 36rpx;">
+        <u-button bind:__l="__l" class="data-v-24adfac5" color="#ff4444" openType="share" size="large" type="primary" vueId="1f46f818-1" vueSlots="{{['default']}}">
+            <u-icon bind:__l="__l" class="data-v-24adfac5" color="#fff" name="share-square" size="36rpx" vueId="{{'1f46f818-2'+','+'1f46f818-1'}}"></u-icon>
+            <text class="data-v-24adfac5">分享本书</text>
+        </u-button>
+    </view>
+    <view class="data-v-24adfac5" style="margin:24rpx;">
+        <ad adIntervals="30" class="data-v-24adfac5" unitId="adunit-cefc8036ba2faea0"></ad>
+    </view>
+</view>

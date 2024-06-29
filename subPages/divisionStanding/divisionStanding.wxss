@@ -1,0 +1,200 @@
+.safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.radius-box {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 4rpx 10rpx 0 rgba(0,0,0,.05);
+    margin: 24rpx;
+    overflow: auto;
+    padding: 24rpx;
+}
+
+.radius-box:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-title {
+    color: #303133;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 24rpx;
+    margin-top: 68rpx;
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+}
+
+.divisionStanding {
+    background: #f5f5f5;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 88rpx;
+}
+
+.divisionStanding .topArea {
+    align-items: center;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 0 24rpx;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.divisionStanding .modal-title {
+    background-color: #ff4444;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+    color: #fff;
+    padding: 24rpx 26rpx;
+}
+
+.divisionStanding .modal-list {
+    height: 45vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.divisionStanding .content,.divisionStanding .list {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0 24rpx;
+}
+
+.divisionStanding .content .item,.divisionStanding .list .item {
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 36rpx;
+    min-width: 50%;
+    padding: 24rpx;
+}
+
+.divisionStanding .content .item .index,.divisionStanding .list .item .index {
+    color: #c0c4cc;
+    font-size: 32rpx;
+    text-align: left;
+    width: 60rpx;
+}
+
+.divisionStanding .content .item .topLine,.divisionStanding .list .item .topLine {
+    border-top: 2rpx solid #c0c4cc;
+    margin-top: 8rpx;
+    position: relative;
+    width: 100%;
+}
+
+.divisionStanding .content .item .topLine .decorate,.divisionStanding .list .item .topLine .decorate {
+    color: #c0c4cc;
+    font-size: 72rpx;
+    font-weight: 100;
+    left: -16rpx;
+    position: absolute;
+    top: -18rpx;
+    transform: rotate(15deg);
+}
+
+.divisionStanding .content .item .topLine .divisor,.divisionStanding .list .item .topLine .divisor {
+    left: -64rpx;
+    position: absolute;
+    top: -2rpx;
+}
+
+.divisionStanding .content .item .number,.divisionStanding .list .item .number {
+    display: flex;
+    padding: 4rpx;
+}
+
+.divisionStanding .content .item .number.double,.divisionStanding .list .item .number.double {
+    justify-content: space-around;
+}
+
+.divisionStanding .content .item .number .text,.divisionStanding .list .item .number .text {
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 12rpx;
+    width: 64rpx;
+}
+
+.divisionStanding .content .item .number .text.zero,.divisionStanding .list .item .number .text.zero {
+    visibility: hidden;
+}
+
+.divisionStanding .content .item .symbol,.divisionStanding .list .item .symbol {
+    padding: 4rpx;
+    text-align: center;
+    width: 32rpx;
+}
+
+.divisionStanding .content .item .result,.divisionStanding .list .item .result {
+    align-items: center;
+    background: #fff;
+    border: 2rpx solid #c0c4cc;
+    border-radius: 8rpx;
+    display: inline-flex;
+    height: 64rpx;
+    justify-content: center;
+    width: 64rpx;
+}
+
+.divisionStanding .content .item .result.hidden,.divisionStanding .content .item .result.zero,.divisionStanding .list .item .result.hidden,.divisionStanding .list .item .result.zero {
+    visibility: hidden;
+}
+
+.divisionStanding .content .item .result.target,.divisionStanding .list .item .result.target {
+    border-color: #ff4444;
+}
+
+.divisionStanding .content .item .result.ml,.divisionStanding .list .item .result.ml {
+    margin-left: 12rpx;
+}
+
+.divisionStanding .content .item .result.mr,.divisionStanding .list .item .result.mr {
+    margin-right: 12rpx;
+}
+
+.divisionStanding .content .item .result.active,.divisionStanding .list .item .result.active {
+    background-color: #fae3d9;
+    border: 2rpx solid #000;
+}
+
+.divisionStanding .content .item .icon,.divisionStanding .list .item .icon {
+    margin-left: 12rpx;
+}
+
+.divisionStanding .submit-btn {
+    padding: 0 24rpx;
+}
+
+.divisionStanding .share {
+    padding: 24rpx;
+}
+
+.divisionStanding .share .icon {
+    margin-right: 8rpx;
+}
+
+.divisionStanding .share .share-over {
+    background: transparent;
+}
+
+.divisionStanding .footer {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 10075;
+}
+
+.divisionStanding .answer-result .line {
+    align-items: center;
+    display: flex;
+}

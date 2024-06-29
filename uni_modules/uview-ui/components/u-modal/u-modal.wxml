@@ -1,0 +1,25 @@
+<u-popup bind:__l="__l" bind:click="__e" class="data-v-b57ab03a" closeOnClickOverlay="{{closeOnClickOverlay}}" customStyle="{{$root.a0}}" data-event-opts="{{[ [ '^click',[ ['clickHandler'] ] ] ]}}" duration="{{400}}" mode="center" safeAreaInsetBottom="{{false}}" show="{{show}}" vueId="297e2191-1" vueSlots="{{['default']}}" zoom="{{zoom}}">
+    <view class="u-modal data-v-b57ab03a" style="{{'width:'+$root.g0+';'}}">
+        <text class="u-modal__title data-v-b57ab03a" wx:if="{{title}}">{{title}}</text>
+        <view class="u-modal__content data-v-b57ab03a" style="{{'padding-top:'+(title?12:25)+'px'+';'}}">
+            <slot wx:if="{{$slots.default}}"></slot>
+            <text class="u-modal__content__text data-v-b57ab03a" wx:else>{{content}}</text>
+        </view>
+        <view class="u-modal__button-group--confirm-button data-v-b57ab03a" wx:if="{{$slots.confirmButton}}">
+            <slot name="confirmButton"></slot>
+        </view>
+        <block wx:else>
+            <u-line bind:__l="__l" class="data-v-b57ab03a" vueId="{{'297e2191-2'+','+'297e2191-1'}}"></u-line>
+            <view class="u-modal__button-group data-v-b57ab03a" style="{{'flex-direction:'+(buttonReverse?'row-reverse':'row')+';'}}">
+                <view bindtap="__e" class="{{['u-modal__button-group__wrapper','u-modal__button-group__wrapper--cancel','data-v-b57ab03a',showCancelButton&&!showConfirmButton&&'u-modal__button-group__wrapper--only-cancel']}}" data-event-opts="{{[ [ 'tap',[ [ 'cancelHandler',['$event'] ] ] ] ]}}" hoverClass="u-modal__button-group__wrapper--hover" hoverStayTime="{{150}}" wx:if="{{showCancelButton}}">
+                    <text class="u-modal__button-group__wrapper__text data-v-b57ab03a" style="{{'color:'+cancelColor+';'}}">{{cancelText}}</text>
+                </view>
+                <u-line bind:__l="__l" class="data-v-b57ab03a" direction="column" vueId="{{'297e2191-3'+','+'297e2191-1'}}" wx:if="{{showConfirmButton&&showCancelButton}}"></u-line>
+                <view bindtap="__e" class="{{['u-modal__button-group__wrapper','u-modal__button-group__wrapper--confirm','data-v-b57ab03a',!showCancelButton&&showConfirmButton&&'u-modal__button-group__wrapper--only-confirm']}}" data-event-opts="{{[ [ 'tap',[ [ 'confirmHandler',['$event'] ] ] ] ]}}" hoverClass="u-modal__button-group__wrapper--hover" hoverStayTime="{{150}}" wx:if="{{showConfirmButton}}">
+                    <u-loading-icon bind:__l="__l" class="data-v-b57ab03a" vueId="{{'297e2191-4'+','+'297e2191-1'}}" wx:if="{{loading}}"></u-loading-icon>
+                    <text class="u-modal__button-group__wrapper__text data-v-b57ab03a" style="{{'color:'+confirmColor+';'}}" wx:else>{{confirmText}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+</u-popup>

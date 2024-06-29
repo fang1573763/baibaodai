@@ -1,0 +1,4 @@
+<image src="{{imgUrl}}" mode="widthFix" bindtap="preview"></image>
+<view>点击图片可以放大预览</view>
+<button type="primary" bindtap="saveImage">保存</button>
+<button type="primary" open-type="share">分享</button>

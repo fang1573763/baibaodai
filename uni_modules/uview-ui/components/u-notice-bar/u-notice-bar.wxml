@@ -1,0 +1,4 @@
+<view class="u-notice-bar data-v-6862e5d8" style="{{$root.s0}}" wx:if="{{show}}">
+    <u-column-notice bgColor="{{bgColor}}" bind:__l="__l" bind:click="__e" bind:close="__e" class="data-v-6862e5d8" color="{{color}}" data-event-opts="{{[ [ '^close',[ ['close'] ] ],[ '^click',[ ['click'] ] ] ]}}" disableTouch="{{disableTouch}}" duration="{{duration}}" fontSize="{{fontSize}}" icon="{{icon}}" mode="{{mode}}" step="{{step}}" text="{{text}}" vueId="734f15bd-1" wx:if="{{direction==='column'||direction==='row'&&step}}"></u-column-notice>
+    <u-row-notice bgColor="{{bgColor}}" bind:__l="__l" bind:click="__e" bind:close="__e" class="data-v-6862e5d8" color="{{color}}" data-event-opts="{{[ [ '^close',[ ['close'] ] ],[ '^click',[ ['click'] ] ] ]}}" fontSize="{{fontSize}}" icon="{{icon}}" linkType="{{linkType}}" mode="{{mode}}" speed="{{speed}}" text="{{text}}" url="{{url}}" vueId="734f15bd-2" wx:else></u-row-notice>
+</view>

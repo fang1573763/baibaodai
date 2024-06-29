@@ -1,0 +1,3 @@
+<view bindtap="__e" bindtouchmove="__e" class="{{['u-transition','data-v-06ef4c74','vue-ref',classes]}}" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',['$event'] ] ] ],[ 'touchmove',[ [ 'noop',['$event'] ] ] ] ]}}" data-ref="u-transition" style="{{$root.s0}}" wx:if="{{inited}}">
+    <slot></slot>
+</view>

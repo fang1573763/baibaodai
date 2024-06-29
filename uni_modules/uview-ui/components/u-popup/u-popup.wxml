@@ -1,0 +1,13 @@
+<view class="u-popup data-v-7eb5cb5a">
+    <u-overlay bind:__l="__l" bind:click="__e" class="data-v-7eb5cb5a" customStyle="{{overlayStyle}}" data-event-opts="{{[ [ '^click',[ ['overlayClick'] ] ] ]}}" duration="{{overlayDuration}}" opacity="{{overlayOpacity}}" show="{{show}}" vueId="7ae01353-1" wx:if="{{overlay}}"></u-overlay>
+    <u-transition bind:__l="__l" bind:afterEnter="__e" bind:click="__e" class="data-v-7eb5cb5a" customStyle="{{transitionStyle}}" data-event-opts="{{[ [ '^afterEnter',[ ['afterEnter'] ] ],[ '^click',[ ['clickHandler'] ] ] ]}}" duration="{{duration}}" mode="{{position}}" show="{{show}}" vueId="7ae01353-2" vueSlots="{{['default']}}">
+        <view catchtap="__e" class="u-popup__content data-v-7eb5cb5a" data-event-opts="{{[ [ 'tap',[ [ 'noop',['$event'] ] ] ] ]}}" style="{{$root.s0}}">
+            <u-status-bar bind:__l="__l" class="data-v-7eb5cb5a" vueId="{{'7ae01353-3'+','+'7ae01353-2'}}" wx:if="{{safeAreaInsetTop}}"></u-status-bar>
+            <slot></slot>
+            <view catchtap="__e" class="{{['u-popup__content__close','data-v-7eb5cb5a','u-popup__content__close--'+closeIconPos]}}" data-event-opts="{{[ [ 'tap',[ [ 'close',['$event'] ] ] ] ]}}" hoverClass="u-popup__content__close--hover" hoverStayTime="150" wx:if="{{closeable}}">
+                <u-icon bind:__l="__l" bold="{{true}}" class="data-v-7eb5cb5a" color="#909399" name="close" size="18" vueId="{{'7ae01353-4'+','+'7ae01353-2'}}"></u-icon>
+            </view>
+            <u-safe-bottom bind:__l="__l" class="data-v-7eb5cb5a" vueId="{{'7ae01353-5'+','+'7ae01353-2'}}" wx:if="{{safeAreaInsetBottom}}"></u-safe-bottom>
+        </view>
+    </u-transition>
+</view>

@@ -1,0 +1,15 @@
+
+
+<view class="container">
+
+    <view class="instruction">
+        <text>上传打开图片后轻触图片进行涂鸦打码赛克</text>
+    </view>
+    <canvas bindtouchend="canvasTouch" bindtouchmove="canvasTouch" bindtouchstart="canvasTouch" canvasId="canvasIn" style="width: {{width}}px; height: {{height}}px;"></canvas>
+    <text>\n</text>
+    <button class="butss" bindtap="upLoadImage" >上传打开图片</button>
+   
+    <button class="butss"  bindtap="saveTap" >保存图片</button>
+    <canvas canvasId="canvasOut" id="canvasOut" style="width: {{outWidth}}px; height: {{outHeight}}px;"></canvas>
+ 
+</view>

@@ -1,0 +1,15 @@
+<view bindtap="__e" class="u-notice data-v-7c219a02" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',['$event'] ] ] ] ]}}">
+    <slot name="icon" wx:if="{{$slots.icon}}"></slot>
+    <block wx:else>
+        <view class="u-notice__left-icon data-v-7c219a02" wx:if="{{icon}}">
+            <u-icon bind:__l="__l" class="data-v-7c219a02" color="{{color}}" name="{{icon}}" size="19" vueId="c11206c6-1"></u-icon>
+        </view>
+    </block>
+    <view class="u-notice__content data-v-7c219a02 vue-ref" data-ref="u-notice__content">
+        <text class="u-notice__content__text data-v-7c219a02 vue-ref" data-ref="u-notice__content__text" style="{{$root.s0}}">{{text}}</text>
+    </view>
+    <view class="u-notice__right-icon data-v-7c219a02" wx:if="{{$root.g0}}">
+        <u-icon bind:__l="__l" class="data-v-7c219a02" color="{{color}}" name="arrow-right" size="{{17}}" vueId="c11206c6-2" wx:if="{{mode==='link'}}"></u-icon>
+        <u-icon bind:__l="__l" bind:click="__e" class="data-v-7c219a02" color="{{color}}" data-event-opts="{{[ [ '^click',[ ['close'] ] ] ]}}" name="close" size="{{16}}" vueId="c11206c6-3" wx:if="{{mode==='closable'}}"></u-icon>
+    </view>
+</view>

@@ -1,0 +1,102 @@
+.safe-area-inset-bottom.data-v-53601e10 {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.radius-box.data-v-53601e10 {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 4rpx 10rpx 0 rgba(0,0,0,.05);
+    margin: 24rpx;
+    overflow: auto;
+    padding: 24rpx;
+}
+
+.radius-box.data-v-53601e10:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-title.data-v-53601e10 {
+    color: #303133;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 24rpx;
+    margin-top: 68rpx;
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+}
+
+scroll-view.data-v-53601e10,swiper-item.data-v-53601e10,view.data-v-53601e10 {
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+@font-face {
+    font-family:uicon-iconfont;src:url(https://at.alicdn.com/t/font_2225171_8kdcwk4po24.ttf) format("truetype");
+}
+
+.u-icon.data-v-53601e10 {
+    align-items: center;
+    display: flex;
+}
+
+.u-icon--left.data-v-53601e10 {
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.u-icon--right.data-v-53601e10 {
+    align-items: center;
+    flex-direction: row;
+}
+
+.u-icon--top.data-v-53601e10 {
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.u-icon--bottom.data-v-53601e10 {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.u-icon__icon.data-v-53601e10 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-family: uicon-iconfont;
+    position: relative;
+}
+
+.u-icon__icon--primary.data-v-53601e10 {
+    color: #ec8181;
+}
+
+.u-icon__icon--success.data-v-53601e10 {
+    color: #5ac725;
+}
+
+.u-icon__icon--error.data-v-53601e10 {
+    color: #f56c6c;
+}
+
+.u-icon__icon--warning.data-v-53601e10 {
+    color: #f9ae3d;
+}
+
+.u-icon__icon--info.data-v-53601e10 {
+    color: #909399;
+}
+
+.u-icon__img.data-v-53601e10 {
+    height: auto;
+    will-change: transform;
+}
+
+.u-icon__label.data-v-53601e10 {
+    line-height: 1;
+}

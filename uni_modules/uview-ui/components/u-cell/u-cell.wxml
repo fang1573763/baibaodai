@@ -1,0 +1,29 @@
+<view bindtap="__e" class="{{['u-cell','data-v-2150815e',customClass]}}" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',['$event'] ] ] ] ]}}" hoverClass="{{!disabled&&(clickable||isLink)?'u-cell--clickable':''}}" hoverStayTime="{{250}}" style="{{$root.s0}}">
+    <view class="{{['u-cell__body','data-v-2150815e',center&&'u-cell--center',size==='large'&&'u-cell__body--large']}}">
+        <view class="u-cell__body__content data-v-2150815e">
+            <view class="u-cell__left-icon-wrap data-v-2150815e" wx:if="{{$slots.icon||icon}}">
+                <slot name="icon" wx:if="{{$slots.icon}}"></slot>
+                <u-icon bind:__l="__l" class="data-v-2150815e" customStyle="{{iconStyle}}" name="{{icon}}" size="{{size==='large'?22:18}}" vueId="49df507d-1" wx:else></u-icon>
+            </view>
+            <view class="u-cell__title data-v-2150815e">
+                <slot name="title" wx:if="{{$slots.title}}"></slot>
+                <block wx:else>
+                    <text class="{{['u-cell__title-text','data-v-2150815e',disabled&&'u-cell--disabled',size==='large'&&'u-cell__title-text--large']}}" style="{{$root.s1}}" wx:if="{{title}}">{{title}}</text>
+                </block>
+                <slot name="label" wx:if="{{$slots.label}}"></slot>
+                <block wx:else>
+                    <text class="{{['u-cell__label','data-v-2150815e',disabled&&'u-cell--disabled',size==='large'&&'u-cell__label--large']}}" wx:if="{{label}}">{{label}}</text>
+                </block>
+            </view>
+        </view>
+        <slot name="value" wx:if="{{$slots.value}}"></slot>
+        <block wx:else>
+            <text class="{{['u-cell__value','data-v-2150815e',disabled&&'u-cell--disabled',size==='large'&&'u-cell__value--large']}}" wx:if="{{!$root.g0}}">{{value}}</text>
+        </block>
+        <view class="{{['u-cell__right-icon-wrap','data-v-2150815e','u-cell__right-icon-wrap--'+arrowDirection]}}" wx:if="{{$slots['right-icon']||isLink}}">
+            <slot name="right-icon" wx:if="{{$slots['right-icon']}}"></slot>
+            <u-icon bind:__l="__l" class="data-v-2150815e" color="{{disabled?'#c8c9cc':'info'}}" customStyle="{{rightIconStyle}}" name="{{rightIcon}}" size="{{size==='large'?18:16}}" vueId="49df507d-2" wx:else></u-icon>
+        </view>
+    </view>
+    <u-line bind:__l="__l" class="data-v-2150815e" vueId="49df507d-3" wx:if="{{border}}"></u-line>
+</view>

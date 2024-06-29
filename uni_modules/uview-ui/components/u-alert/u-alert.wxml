@@ -1,0 +1,14 @@
+<u-transition bind:__l="__l" class="data-v-62fa04c8" mode="fade" show="{{show}}" vueId="9d61241a-1" vueSlots="{{['default']}}">
+    <view catchtap="__e" class="{{['u-alert','data-v-62fa04c8','u-alert--'+type+'--'+effect]}}" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',['$event'] ] ] ] ]}}" style="{{$root.s0}}">
+        <view class="u-alert__icon data-v-62fa04c8" wx:if="{{showIcon}}">
+            <u-icon bind:__l="__l" class="data-v-62fa04c8" color="{{iconColor}}" name="{{iconName}}" size="18" vueId="{{'9d61241a-2'+','+'9d61241a-1'}}"></u-icon>
+        </view>
+        <view class="u-alert__content data-v-62fa04c8" style="{{'padding-right:'+(closable?'20px':0)+';'}}">
+            <text class="{{['u-alert__content__title','data-v-62fa04c8',effect==='dark'?'u-alert__text--dark':'u-alert__text--'+type+'--light']}}" style="{{'font-size:'+$root.g0+';'+'text-align:'+(center?'center':'left')+';'}}" wx:if="{{title}}">{{title}}</text>
+            <text class="{{['u-alert__content__desc','data-v-62fa04c8',effect==='dark'?'u-alert__text--dark':'u-alert__text--'+type+'--light']}}" style="{{'font-size:'+$root.g1+';'+'text-align:'+(center?'center':'left')+';'}}" wx:if="{{description}}">{{description}}</text>
+        </view>
+        <view catchtap="__e" class="u-alert__close data-v-62fa04c8" data-event-opts="{{[ [ 'tap',[ [ 'closeHandler',['$event'] ] ] ] ]}}" wx:if="{{closable}}">
+            <u-icon bind:__l="__l" class="data-v-62fa04c8" color="{{iconColor}}" name="close" size="15" vueId="{{'9d61241a-3'+','+'9d61241a-1'}}"></u-icon>
+        </view>
+    </view>
+</u-transition>

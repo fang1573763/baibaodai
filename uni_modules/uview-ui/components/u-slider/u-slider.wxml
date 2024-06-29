@@ -1,0 +1,3 @@
+<view class="u-slider data-v-2e1e0695" style="{{$root.s0}}">
+    <slider activeColor="{{activeColor}}" bindchange="__e" bindchanging="__e" blockColor="{{blockColor}}" blockSize="{{$root.g0}}" class="data-v-2e1e0695" data-event-opts="{{[ [ 'changing',[ [ 'changingHandler',['$event'] ] ] ],[ 'change',[ [ 'changeHandler',['$event'] ] ] ] ]}}" disabled="{{disabled}}" inactiveColor="{{inactiveColor}}" max="{{max}}" min="{{min}}" showValue="{{showValue}}" step="{{step}}" value="{{value}}"></slider>
+</view>

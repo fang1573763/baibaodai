@@ -1,0 +1,91 @@
+<view class="rmb">
+    <view class="topArea">
+        <view>{{'第 '+curIdx+1+'/'+randomList.length+' 题'}}</view>
+        <view>
+            <u-button bind:__l="__l" color="#19be6b" customStyle="{{shareBtnCustomStyle}}" hoverClass="share-over" openType="share" plain="{{true}}" size="mini" type="primary" vueId="81a66f38-1" vueSlots="{{['default']}}">
+                <u-icon bind:__l="__l" color="#19be6b" name="share-square" size="36rpx" top="2rpx" vueId="{{'81a66f38-2'+','+'81a66f38-1'}}"></u-icon>分享给同学们</u-button>
+        </view>
+        <view>
+            <text>时间</text>
+            <text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>:<text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>
+        </view>
+    </view>
+    <view class="target-number">
+        <text class="number">{{''+(randomList.length?randomList[curIdx].answer2:'')+''}}</text>
+    </view>
+    <view class="tips">点击货币，可以删除</view>
+    <view class="add-list">
+        <view class="item" wx:for="{{addList}}" wx:for-index="idx" wx:key="idx">
+            <image bindtap="__e" class="{{['img',item.type==2?'paper':'coin']}}" data-event-opts="{{[ [ 'tap',[ [ 'removeRmb',['$0',idx],[ [ ['addList','',idx] ] ] ] ] ] ]}}" src="{{'../../static/'+item.url}}"></image>
+        </view>
+        <view style="margin-top:32rpx;color:#ec8181;font-size:28rpx;" wx:if="{{!addList||addList.length==0}}">请根据目标金额，点击下方货币</view>
+    </view>
+    <view class="tips">请根据目标金额，点击货币</view>
+    <view class="list">
+        <view class="item" wx:for="{{rmbList}}" wx:for-index="idx" wx:key="idx">
+            <image bindtap="__e" class="{{['img',item.type==2?'paper':'coin']}}" data-event-opts="{{[ [ 'tap',[ [ 'addRmb',['$0',idx],[ [ ['rmbList','',idx] ] ] ] ] ] ]}}" mode="widthFix" src="{{'../../static/'+item.url}}"></image>
+        </view>
+    </view>
+    <view class="submit-btn">
+        <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['submit'] ] ] ]}}" size="large" type="primary" vueId="81a66f38-3" vueSlots="{{['default']}}" wx:if="{{!isCalc}}">提交批改</u-button>
+        <view style="margin-bottom:24rpx;margin-top:36rpx;" wx:else>
+            <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['navigateBack'] ] ] ]}}" size="large" type="primary" vueId="81a66f38-4" vueSlots="{{['default']}}">返回</u-button>
+        </view>
+        <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['e0'] ] ] ]}}" size="large" vueId="81a66f38-5" vueSlots="{{['default']}}" wx:if="{{isCalc}}">查看答题结果</u-button>
+    </view>
+    <view style="margin:24rpx;">
+        <ad adIntervals="30" unitId="adunit-8b2e70e77ba269c1"></ad>
+    </view>
+    <u-modal bind:__l="__l" bind:close="__e" bind:confirm="__e" closeOnClickOverlay="{{false}}" data-event-opts="{{[ [ '^close',[ ['e1'] ] ],[ '^confirm',[ ['e2'] ] ] ]}}" show="{{showModal}}" showCancelButton="{{false}}" showConfirmButton="{{false}}" title="{{modalTitle}}" titleStyle="{{({color:'#D47AE8'})}}" vueId="81a66f38-6" vueSlots="{{['default']}}" zoom="{{false}}">
+        <view class="slot-content">
+            <view class="answer-result">
+                <view wx:if="{{curIdx==randomList.length-1&&isCalc}}">
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#F4BEEE" name="order" size="44" style="margin-right:8rpx;width:44rpx;" vueId="{{'81a66f38-7'+','+'81a66f38-6'}}"></u-icon>
+                        <text>{{'得分 ：'+grade+' 分'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#D47AE8" name="list-dot" size="40" style="margin-right:8rpx;width:44rpx;" vueId="{{'81a66f38-8'+','+'81a66f38-6'}}"></u-icon>
+                        <text>{{'总数 ：'+randomList.length+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#fa3534" name="close" size="32" style="margin-right:8rpx;width:44rpx;" vueId="{{'81a66f38-9'+','+'81a66f38-6'}}"></u-icon>
+                        <text>{{'答错 ： '+errNo+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#19be6b" name="checkbox-mark" size="38" style="margin-right:8rpx;width:44rpx;" vueId="{{'81a66f38-10'+','+'81a66f38-6'}}"></u-icon>
+                        <text>{{'答对 ：'+randomList.length-errNo+' 题'}}</text>
+                    </view>
+                    <view class="line">
+                        <u-icon bind:__l="__l" color="#066166" name="hourglass-half-fill" size="44" style="margin-right:8rpx;width:44rpx;" vueId="{{'81a66f38-11'+','+'81a66f38-6'}}"></u-icon>
+                        <view style="display:inline-block;">
+                            <text>用时 ：</text>
+                            <text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>分<text style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>秒</view>
+                    </view>
+                </view>
+                <view style="margin-bottom:24rpx;" wx:else>
+                    <view wx:if="{{curRes}}">
+                        <view style="text-align:center;">
+                            <image src="../../static/good.png" style="width:160rpx;height:160rpx;"></image>
+                        </view>
+                        <view style="text-align:center;color:#D47AE8;">超棒！答对了!</view>
+                    </view>
+                    <view wx:else>
+                        <view style="display:flex;justify-content:center;align-items:center;color:red;font-size:48rpx;font-weight:bold;">
+                            <u-icon bind:__l="__l" color="red" name="close" size="80" vueId="{{'81a66f38-12'+','+'81a66f38-6'}}"></u-icon>
+                        </view>
+                        <view style="text-align:center;color:red;">同学，答错了哦~</view>
+                    </view>
+                </view>
+                <u-button bind:__l="__l" bind:click="__e" class="confirm-button" data-event-opts="{{[ [ '^click',[ ['next'] ] ] ]}}" size="large" type="primary" vueId="{{'81a66f38-13'+','+'81a66f38-6'}}" vueSlots="{{['default']}}" wx:if="{{curIdx<randomList.length-1}}">下一题</u-button>
+                <block wx:else>
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button" data-event-opts="{{[ [ '^click',[ ['finish'] ] ] ]}}" size="large" type="primary" vueId="{{'81a66f38-14'+','+'81a66f38-6'}}" vueSlots="{{['default']}}" wx:if="{{curIdx===randomList.length-1&&!isCalc}}">查看结果</u-button>
+                </block>
+                <u-button bind:__l="__l" bind:click="__e" data-event-opts="{{[ [ '^click',[ ['e3'] ] ] ]}}" size="large" type="primary" vueId="{{'81a66f38-15'+','+'81a66f38-6'}}" vueSlots="{{['default']}}" wx:if="{{isCalc}}">关闭</u-button>
+                <view style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" openType="share" size="large" type="success" vueId="{{'81a66f38-16'+','+'81a66f38-6'}}" vueSlots="{{['default']}}">分享给同学</u-button>
+                </view>
+            </view>
+        </view>
+    </u-modal>
+</view>

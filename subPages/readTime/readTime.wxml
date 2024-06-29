@@ -1,0 +1,79 @@
+<view class="readTime data-v-bda4b53e">
+    <view class="topArea data-v-bda4b53e">
+        <view class="data-v-bda4b53e">{{'第 '+curIdx+1+'/'+randomList.length+' 题'}}</view>
+        <view class="data-v-bda4b53e">
+            <u-button bind:__l="__l" class="data-v-bda4b53e" color="#19be6b" customStyle="{{shareBtnCustomStyle}}" hoverClass="share-over" openType="share" plain="{{true}}" size="mini" type="primary" vueId="a90a46d8-1" vueSlots="{{['default']}}">
+                <u-icon bind:__l="__l" class="data-v-bda4b53e" color="#19be6b" name="share-square" size="36rpx" top="2rpx" vueId="{{'a90a46d8-2'+','+'a90a46d8-1'}}"></u-icon>分享给同学们</u-button>
+        </view>
+        <view class="data-v-bda4b53e">
+            <text class="data-v-bda4b53e">时间</text>
+            <text class="data-v-bda4b53e" style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>:<text class="data-v-bda4b53e" style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>
+        </view>
+    </view>
+    <view class="dashboard data-v-bda4b53e">
+        <image class="bg data-v-bda4b53e" mode="widthFix" src="../../static/time.png"></image>
+        <image class="hour data-v-bda4b53e" src="../../static/hour.png" style="{{'transform:'+rotateHour+';'}}"></image>
+        <image class="minute data-v-bda4b53e" src="../../static/hour.png" style="{{'transform:'+rotateMinute+';'}}"></image>
+    </view>
+    <view class="target-number data-v-bda4b53e">
+        <text bindtap="__e" class="{{['result','data-v-bda4b53e',inputIdx==curIdx+','+'hour'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx+','+'hour'] ] ] ] ]}}">{{randomList[curIdx].hour_res||''}}</text>时<text bindtap="__e" class="{{['result','data-v-bda4b53e',inputIdx==curIdx+','+'minute'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tapBox',[curIdx+','+'minute'] ] ] ] ]}}">{{randomList[curIdx].minute_res||''}}</text>分</view>
+    <view class="my-keyboard data-v-bda4b53e">
+        <my-keyboard bind:__l="__l" bind:backspace="__e" bind:change="__e" bind:confirm="__e" bind:input="__e" cancelText=" " class="data-v-bda4b53e vue-ref" confirmText="批改" data-event-opts="{{[ [ '^change',[ ['onKeyboardChange'] ] ],[ '^backspace',[ ['backspace'] ] ],[ '^confirm',[ ['submit'] ] ],[ '^input',[ [ '__set_model',[ '','showKeyBoard','$event',[] ] ] ] ] ]}}" data-ref="uKeyboard" mask="{{false}}" mode="number" value="{{showKeyBoard}}" vueId="a90a46d8-3"></my-keyboard>
+    </view>
+    <view class="data-v-bda4b53e" style="margin:24rpx;">
+        <ad adIntervals="30" class="data-v-bda4b53e" unitId="adunit-8b2e70e77ba269c1"></ad>
+    </view>
+    <u-modal bind:__l="__l" bind:close="__e" bind:confirm="__e" class="data-v-bda4b53e" closeOnClickOverlay="{{false}}" data-event-opts="{{[ [ '^close',[ ['e0'] ] ],[ '^confirm',[ ['e1'] ] ] ]}}" show="{{showModal}}" showCancelButton="{{false}}" showConfirmButton="{{false}}" title="{{modalTitle}}" titleStyle="{{({color:'#D47AE8'})}}" vueId="a90a46d8-4" vueSlots="{{['default']}}" zoom="{{false}}">
+        <view class="slot-content data-v-bda4b53e">
+            <view class="answer-result data-v-bda4b53e">
+                <view class="data-v-bda4b53e" wx:if="{{curIdx==randomList.length-1&&isCalc}}">
+                    <view class="line data-v-bda4b53e">
+                        <u-icon bind:__l="__l" class="data-v-bda4b53e" color="#F4BEEE" name="order" size="44" style="margin-right:8rpx;width:44rpx;" vueId="{{'a90a46d8-5'+','+'a90a46d8-4'}}"></u-icon>
+                        <text class="data-v-bda4b53e">{{'得分 ：'+grade+' 分'}}</text>
+                    </view>
+                    <view class="line data-v-bda4b53e">
+                        <u-icon bind:__l="__l" class="data-v-bda4b53e" color="#D47AE8" name="list-dot" size="40" style="margin-right:8rpx;width:44rpx;" vueId="{{'a90a46d8-6'+','+'a90a46d8-4'}}"></u-icon>
+                        <text class="data-v-bda4b53e">{{'总数 ：'+randomList.length+' 题'}}</text>
+                    </view>
+                    <view class="line data-v-bda4b53e">
+                        <u-icon bind:__l="__l" class="data-v-bda4b53e" color="#fa3534" name="close" size="32" style="margin-right:8rpx;width:44rpx;" vueId="{{'a90a46d8-7'+','+'a90a46d8-4'}}"></u-icon>
+                        <text class="data-v-bda4b53e">{{'答错 ： '+errNo+' 题'}}</text>
+                    </view>
+                    <view class="line data-v-bda4b53e">
+                        <u-icon bind:__l="__l" class="data-v-bda4b53e" color="#19be6b" name="checkbox-mark" size="38" style="margin-right:8rpx;width:44rpx;" vueId="{{'a90a46d8-8'+','+'a90a46d8-4'}}"></u-icon>
+                        <text class="data-v-bda4b53e">{{'答对 ：'+randomList.length-errNo+' 题'}}</text>
+                    </view>
+                    <view class="line data-v-bda4b53e">
+                        <u-icon bind:__l="__l" class="data-v-bda4b53e" color="#066166" name="hourglass-half-fill" size="44" style="margin-right:8rpx;width:44rpx;" vueId="{{'a90a46d8-9'+','+'a90a46d8-4'}}"></u-icon>
+                        <view class="data-v-bda4b53e" style="display:inline-block;">
+                            <text class="data-v-bda4b53e">用时 ：</text>
+                            <text class="data-v-bda4b53e" style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>分<text class="data-v-bda4b53e" style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>秒</view>
+                    </view>
+                </view>
+                <view class="data-v-bda4b53e" style="margin-bottom:24rpx;" wx:else>
+                    <view class="data-v-bda4b53e" wx:if="{{curRes}}">
+                        <view class="data-v-bda4b53e" style="text-align:center;">
+                            <image class="data-v-bda4b53e" src="../../static/good.png" style="width:160rpx;height:160rpx;"></image>
+                        </view>
+                        <view class="data-v-bda4b53e" style="text-align:center;color:#D47AE8;">超棒！答对了!</view>
+                    </view>
+                    <view class="data-v-bda4b53e" wx:else>
+                        <view class="data-v-bda4b53e" style="display:flex;justify-content:center;align-items:center;color:red;font-size:48rpx;font-weight:bold;">
+                            <u-icon bind:__l="__l" class="data-v-bda4b53e" color="red" name="close" size="80" vueId="{{'a90a46d8-10'+','+'a90a46d8-4'}}"></u-icon>
+                        </view>
+                        <view class="data-v-bda4b53e" style="text-align:center;color:red;">同学，答错了哦~</view>
+                        <view class="data-v-bda4b53e" style="{{'text-align:center;color:#303133;margin-top:12rpx;'+'visibility:'+(showModal?'visible':'hidden')+';'}}">{{'正确答案：'+randomList[curIdx].hour+'时'+randomList[curIdx].minute+'分'+''}}</view>
+                    </view>
+                </view>
+                <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-bda4b53e" data-event-opts="{{[ [ '^click',[ ['next'] ] ] ]}}" size="large" type="primary" vueId="{{'a90a46d8-11'+','+'a90a46d8-4'}}" vueSlots="{{['default']}}" wx:if="{{curIdx<randomList.length-1}}">下一题</u-button>
+                <block wx:else>
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-bda4b53e" data-event-opts="{{[ [ '^click',[ ['finish'] ] ] ]}}" size="large" type="primary" vueId="{{'a90a46d8-12'+','+'a90a46d8-4'}}" vueSlots="{{['default']}}" wx:if="{{curIdx===randomList.length-1&&!isCalc}}">查看结果</u-button>
+                </block>
+                <u-button bind:__l="__l" bind:click="__e" class="data-v-bda4b53e" data-event-opts="{{[ [ '^click',[ ['e2'] ] ] ]}}" size="large" type="primary" vueId="{{'a90a46d8-13'+','+'a90a46d8-4'}}" vueSlots="{{['default']}}" wx:if="{{isCalc}}">关闭</u-button>
+                <view class="data-v-bda4b53e" style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" class="data-v-bda4b53e" openType="share" size="large" type="success" vueId="{{'a90a46d8-14'+','+'a90a46d8-4'}}" vueSlots="{{['default']}}">分享给同学</u-button>
+                </view>
+            </view>
+        </view>
+    </u-modal>
+</view>

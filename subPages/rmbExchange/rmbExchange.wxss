@@ -1,0 +1,127 @@
+.safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.radius-box {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 4rpx 10rpx 0 rgba(0,0,0,.05);
+    margin: 24rpx;
+    overflow: auto;
+    padding: 24rpx;
+}
+
+.radius-box:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-title {
+    color: #303133;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 24rpx;
+    margin-top: 68rpx;
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+}
+
+.detail {
+    background: #f5f5f5;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.detail .topArea {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24rpx;
+}
+
+.detail .content,.detail .list {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 24rpx;
+    padding: 0 12rpx;
+}
+
+.detail .content .item,.detail .list .item {
+    align-items: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-size: 36rpx;
+    justify-content: center;
+    padding: 24rpx;
+    width: 100%;
+}
+
+.detail .content .item .index,.detail .list .item .index {
+    color: #c0c4cc;
+    font-size: 32rpx;
+    text-align: left;
+    width: 60rpx;
+}
+
+.detail .content .item .number,.detail .list .item .number {
+    min-width: 44rpx;
+    text-align: center;
+}
+
+.detail .content .item .symbol,.detail .list .item .symbol {
+    min-width: 32rpx;
+    padding: 4rpx;
+    text-align: center;
+}
+
+.detail .content .item .result,.detail .list .item .result {
+    align-items: center;
+    background: #fff;
+    border: 2rpx solid #c0c4cc;
+    border-radius: 8rpx;
+    display: inline-flex;
+    justify-content: center;
+    min-height: 68rpx;
+    min-width: 88rpx;
+}
+
+.detail .content .item .result.active,.detail .list .item .result.active {
+    background-color: #fae3d9;
+    border: 2rpx solid #000;
+}
+
+.detail .content .item .icon,.detail .list .item .icon {
+    margin-left: 12rpx;
+}
+
+.detail .submit-btn {
+    padding: 0 24rpx;
+}
+
+.detail .share {
+    padding: 24rpx;
+}
+
+.detail .share .icon {
+    margin-right: 8rpx;
+}
+
+.detail .share .share-over {
+    background: transparent;
+}
+
+.detail .footer {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 10075;
+}
+
+.detail .answer-result .line {
+    align-items: center;
+    display: flex;
+}

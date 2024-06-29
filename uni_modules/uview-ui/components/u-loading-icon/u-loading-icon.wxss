@@ -1,0 +1,196 @@
+.safe-area-inset-bottom.data-v-10a89718 {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.radius-box.data-v-10a89718 {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 4rpx 10rpx 0 rgba(0,0,0,.05);
+    margin: 24rpx;
+    overflow: auto;
+    padding: 24rpx;
+}
+
+.radius-box.data-v-10a89718:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-title.data-v-10a89718 {
+    color: #303133;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 24rpx;
+    margin-top: 68rpx;
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+}
+
+scroll-view.data-v-10a89718,swiper-item.data-v-10a89718,view.data-v-10a89718 {
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.u-loading-icon.data-v-10a89718 {
+    align-items: center;
+    color: #c8c9cc;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.u-loading-icon__text.data-v-10a89718 {
+    color: #606266;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 4px;
+}
+
+.u-loading-icon__spinner.data-v-10a89718 {
+    animation: u-rotate-data-v-10a89718 1s linear infinite;
+    box-sizing: border-box;
+    height: 30px;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    width: 30px;
+}
+
+.u-loading-icon__spinner--semicircle.data-v-10a89718 {
+    border: 2px solid transparent;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.u-loading-icon__spinner--circle.data-v-10a89718 {
+    border: 2px solid #e5e5e5;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.u-loading-icon--vertical.data-v-10a89718 {
+    flex-direction: column;
+}
+
+.data-v-10a89718:host {
+    font-size: 0;
+    line-height: 1;
+}
+
+.u-loading-icon__spinner--spinner.data-v-10a89718 {
+    animation-timing-function: steps(12);
+}
+
+.u-loading-icon__text.data-v-10a89718:empty {
+    display: none;
+}
+
+.u-loading-icon--vertical .u-loading-icon__text.data-v-10a89718 {
+    color: #606266;
+    margin: 6px 0 0;
+}
+
+.u-loading-icon__dot.data-v-10a89718 {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.u-loading-icon__dot.data-v-10a89718:before {
+    background-color: currentColor;
+    border-radius: 40%;
+    content: " ";
+    display: block;
+    height: 25%;
+    margin: 0 auto;
+    width: 2px;
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(1) {
+    opacity: 1;
+    transform: rotate(30deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(2) {
+    opacity: .9375;
+    transform: rotate(60deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(3) {
+    opacity: .875;
+    transform: rotate(90deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(4) {
+    opacity: .8125;
+    transform: rotate(120deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(5) {
+    opacity: .75;
+    transform: rotate(150deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(6) {
+    opacity: .6875;
+    transform: rotate(180deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(7) {
+    opacity: .625;
+    transform: rotate(210deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(8) {
+    opacity: .5625;
+    transform: rotate(240deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(9) {
+    opacity: .5;
+    transform: rotate(270deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(10) {
+    opacity: .4375;
+    transform: rotate(300deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(11) {
+    opacity: .375;
+    transform: rotate(330deg);
+}
+
+.u-loading-icon__dot.data-v-10a89718:nth-of-type(12) {
+    opacity: .3125;
+    transform: rotate(1turn);
+}
+
+@-webkit-keyframes u-rotate-data-v-10a89718 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes u-rotate-data-v-10a89718 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}

@@ -1,0 +1,8 @@
+<view class="u-empty data-v-b55bbdec" style="{{$root.s0}}" wx:if="{{show}}">
+    <u-icon bind:__l="__l" class="data-v-b55bbdec" color="{{iconColor}}" marginTop="14" name="{{mode==='message'?'chat':'empty-'+mode}}" size="{{iconSize}}" vueId="30fcf451-1" wx:if="{{!isSrc}}"></u-icon>
+    <image class="data-v-b55bbdec" mode="widthFix" src="{{icon}}" style="{{'width:'+$root.g0+';'+'height:'+$root.g1+';'}}" wx:else></image>
+    <text class="u-empty__text data-v-b55bbdec" style="{{$root.s1}}">{{text?text:icons[mode]}}</text>
+    <view class="u-empty__wrap data-v-b55bbdec" wx:if="{{$slots.default||$slots[$default]}}">
+        <slot></slot>
+    </view>
+</view>

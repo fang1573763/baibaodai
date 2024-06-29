@@ -1,0 +1,108 @@
+<view catchtouchmove="return" class="huarongdao data-v-3adea813">
+    <view class="topArea data-v-3adea813">
+        <view class="data-v-3adea813">{{'步数：'+steps+''}}</view>
+        <view class="data-v-3adea813">
+            <u-button bind:__l="__l" class="data-v-3adea813" color="#19be6b" customStyle="{{shareBtnCustomStyle}}" hoverClass="share-over" openType="share" plain="{{true}}" size="mini" type="primary" vueId="1107fb98-1" vueSlots="{{['default']}}">
+                <u-icon bind:__l="__l" class="data-v-3adea813" color="#19be6b" name="share-square" size="36rpx" top="2rpx" vueId="{{'1107fb98-2'+','+'1107fb98-1'}}"></u-icon>分享给好友</u-button>
+        </view>
+        <view class="data-v-3adea813">
+            <text class="data-v-3adea813">时间</text>
+            <text class="data-v-3adea813" style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>:<text class="data-v-3adea813" style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>
+        </view>
+    </view>
+    <view class="operation-bar data-v-3adea813">
+        <view class="data-v-3adea813">
+            <text class="label data-v-3adea813">难度：</text>
+            <text class="value data-v-3adea813">{{column+' x '+column}}</text>
+        </view>
+        <view class="data-v-3adea813" style="font-size:24rpx;width:30%;">
+            <u-button bind:__l="__l" bind:click="__e" class="data-v-3adea813" data-event-opts="{{[ [ '^click',[ ['e0'] ] ] ]}}" plain="{{true}}" size="default" type="primary" vueId="1107fb98-3" vueSlots="{{['default']}}">切换难度</u-button>
+        </view>
+    </view>
+    <view class="playBox data-v-3adea813">
+        <view class="movable-area data-v-3adea813" style="{{'width:'+column*boxWidth+'rpx'+';'+'height:'+column*boxHeight+'rpx'+';'}}">
+            <view bindtap="__e" bindtouchcancel="__e" bindtouchend="__e" bindtouchmove="__e" bindtouchstart="__e" class="movable-view data-v-3adea813" data-event-opts="{{[ [ 'tap',[ [ 'tap',['$0',idx],[ [ ['list','number',item.number] ] ] ] ] ],[ 'touchstart',[ [ 'e1',['$event'] ] ] ],[ 'touchend',[ [ 'e2',['$event'] ] ] ],[ 'touchmove',[ [ 'e3',['$event'] ] ] ],[ 'touchcancel',[ [ 'e4',['$event'] ] ] ] ]}}" data-event-params="{{({item,idx,item,idx,item,idx,item,idx})}}" style="{{'left:'+item.x+'rpx'+';'+'top:'+item.y+'rpx'+';'+'width:'+boxWidth+'rpx'+';'+'height:'+boxHeight+'rpx'+';'}}" wx:for="{{list}}" wx:for-index="idx" wx:key="number">
+                <view class="inner-view data-v-3adea813">
+                    <text class="text data-v-3adea813" style="{{'font-size:'+(column>5?'36rpx':'68rpx')+';'}}">{{item.number}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="data-v-3adea813" style="margin-bottom:24rpx;text-align:center;">
+        <text class="data-v-3adea813" style="color:#909199;font-size:28rpx;">请点击空位旁的木块，将打乱的数字还原成正确的顺序</text>
+    </view>
+    <view class="data-v-3adea813" style="width:50%;margin:0 auto;">
+        <u-button bind:__l="__l" bind:click="__e" class="data-v-3adea813" data-event-opts="{{[ [ '^click',[ ['e5'] ] ] ]}}" plain="{{true}}" size="default" type="primary" vueId="1107fb98-4" vueSlots="{{['default']}}">查看正确的顺序</u-button>
+    </view>
+    <view class="data-v-3adea813" style="margin:24rpx;">
+        <ad adIntervals="30" class="data-v-3adea813" unitId="adunit-8b2e70e77ba269c1"></ad>
+    </view>
+    <u-popup bind:__l="__l" bind:close="__e" class="data-v-3adea813" closeOnClickOverlay="{{true}}" closeable="{{true}}" customStyle="{{popupCustomStyle}}" data-event-opts="{{[ [ '^close',[ ['e6'] ] ] ]}}" mode="bottom" overlay="{{false}}" round="{{10}}" safeAreaInsetBottom="{{true}}" show="{{showAnswerModal}}" vueId="1107fb98-5" vueSlots="{{['default']}}">
+        <view class="modal-title data-v-3adea813">正确的顺序</view>
+        <view class="playBox data-v-3adea813">
+            <view class="movable-area data-v-3adea813" style="{{'width:'+column*boxWidth+'rpx'+';'+'height:'+column*boxHeight+'rpx'+';'}}">
+                <view class="movable-view data-v-3adea813" style="{{'left:'+item.x+'rpx'+';'+'top:'+item.y+'rpx'+';'+'width:'+boxWidth+'rpx'+';'+'height:'+boxHeight+'rpx'+';'}}" wx:for="{{correctList}}" wx:for-index="idx" wx:key="number">
+                    <view class="inner-view data-v-3adea813">
+                        <text class="text data-v-3adea813" style="{{'font-size:'+(column>5?'36rpx':'68rpx')+';'}}">{{item.number}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </u-popup>
+    <u-modal bind:__l="__l" bind:close="__e" bind:confirm="__e" class="data-v-3adea813" closeOnClickOverlay="{{false}}" data-event-opts="{{[ [ '^close',[ ['e7'] ] ],[ '^confirm',[ ['e8'] ] ] ]}}" show="{{showModal}}" showCancelButton="{{false}}" showConfirmButton="{{false}}" title="恭喜过关!" titleStyle="{{({color:'#D47AE8'})}}" vueId="1107fb98-6" vueSlots="{{['default']}}" zoom="{{false}}">
+        <view class="slot-content data-v-3adea813">
+            <view class="answer-result data-v-3adea813">
+                <view class="data-v-3adea813" style="margin-bottom:24rpx;">
+                    <view class="data-v-3adea813">
+                        <view class="data-v-3adea813" style="text-align:center;">
+                            <image class="data-v-3adea813" src="../../static/good.png" style="width:120rpx;height:120rpx;"></image>
+                        </view>
+                    </view>
+                    <view class="line data-v-3adea813">
+                        <view class="data-v-3adea813" style="display:inline-block;margin-right:24rpx;">
+                            <view class="label data-v-3adea813">耗时 ：</view>
+                            <view class="value data-v-3adea813">
+                                <text class="data-v-3adea813" style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.hour}}</text>分<text class="data-v-3adea813" style="display:inline-block;width:44rpx;text-align:center;">{{formartTimer.minute}}</text>秒</view>
+                        </view>
+                        <view class="data-v-3adea813" style="display:inline-block;">
+                            <view class="label data-v-3adea813">步数 ：</view>
+                            <view class="value data-v-3adea813">
+                                <text class="data-v-3adea813" style="display:inline-block;width:44rpx;text-align:center;">{{steps}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="data-v-3adea813" style="margin-top:24rpx;">
+                        <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-3adea813" data-event-opts="{{[ [ '^click',[ ['again'] ] ] ]}}" size="large" type="primary" vueId="{{'1107fb98-7'+','+'1107fb98-6'}}" vueSlots="{{['default']}}">再来一局</u-button>
+                    </view>
+                    <view class="data-v-3adea813" style="margin-top:24rpx;">
+                        <u-button bind:__l="__l" class="data-v-3adea813" openType="share" size="large" type="success" vueId="{{'1107fb98-8'+','+'1107fb98-6'}}" vueSlots="{{['default']}}">分享战绩</u-button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </u-modal>
+    <u-modal bind:__l="__l" bind:close="__e" bind:confirm="__e" class="data-v-3adea813" closeOnClickOverlay="{{false}}" data-event-opts="{{[ [ '^close',[ ['e9'] ] ],[ '^confirm',[ ['e10'] ] ] ]}}" show="{{showSelectModal}}" showCancelButton="{{false}}" showConfirmButton="{{false}}" title="请选择难度" titleStyle="{{({color:'#D47AE8'})}}" vueId="1107fb98-9" vueSlots="{{['default']}}" zoom="{{false}}">
+        <view class="slot-content data-v-3adea813" style="width:100%;">
+            <view class="answer-result data-v-3adea813">
+                <view class="data-v-3adea813" style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-3adea813" data-event-opts="{{[ [ '^click',[ [ 'beginGame',[3] ] ] ] ]}}" plain="{{false}}" size="large" type="primary" vueId="{{'1107fb98-10'+','+'1107fb98-9'}}" vueSlots="{{['default']}}">3x3矩阵</u-button>
+                </view>
+                <view class="data-v-3adea813" style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-3adea813" data-event-opts="{{[ [ '^click',[ [ 'beginGame',[4] ] ] ] ]}}" plain="{{false}}" size="large" type="primary" vueId="{{'1107fb98-11'+','+'1107fb98-9'}}" vueSlots="{{['default']}}">4x4矩阵</u-button>
+                </view>
+                <view class="data-v-3adea813" style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-3adea813" data-event-opts="{{[ [ '^click',[ [ 'beginGame',[5] ] ] ] ]}}" plain="{{false}}" size="large" type="primary" vueId="{{'1107fb98-12'+','+'1107fb98-9'}}" vueSlots="{{['default']}}">5x5矩阵</u-button>
+                </view>
+                <view class="data-v-3adea813" style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-3adea813" data-event-opts="{{[ [ '^click',[ [ 'beginGame',[6] ] ] ] ]}}" plain="{{false}}" size="large" type="primary" vueId="{{'1107fb98-13'+','+'1107fb98-9'}}" vueSlots="{{['default']}}">6x6矩阵</u-button>
+                </view>
+                <view class="data-v-3adea813" style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-3adea813" data-event-opts="{{[ [ '^click',[ [ 'beginGame',[7] ] ] ] ]}}" plain="{{false}}" size="large" type="primary" vueId="{{'1107fb98-14'+','+'1107fb98-9'}}" vueSlots="{{['default']}}">7x7矩阵</u-button>
+                </view>
+                <view class="data-v-3adea813" style="margin-top:24rpx;">
+                    <u-button bind:__l="__l" bind:click="__e" class="confirm-button data-v-3adea813" data-event-opts="{{[ [ '^click',[ [ 'beginGame',[8] ] ] ] ]}}" plain="{{false}}" size="large" type="primary" vueId="{{'1107fb98-15'+','+'1107fb98-9'}}" vueSlots="{{['default']}}">8x8矩阵</u-button>
+                </view>
+            </view>
+        </view>
+    </u-modal>
+</view>

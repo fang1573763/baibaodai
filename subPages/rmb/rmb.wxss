@@ -1,0 +1,145 @@
+.safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.radius-box {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 4rpx 10rpx 0 rgba(0,0,0,.05);
+    margin: 24rpx;
+    overflow: auto;
+    padding: 24rpx;
+}
+
+.radius-box:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-title {
+    color: #303133;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 24rpx;
+    margin-top: 68rpx;
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+}
+
+.rmb {
+    background: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.rmb .topArea {
+    align-items: center;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24rpx;
+}
+
+.rmb .target-number {
+    text-align: center;
+}
+
+.rmb .target-number .number {
+    font-size: 64rpx;
+    font-weight: 700;
+}
+
+.rmb .tips {
+    color: #909399;
+    font-size: 28rpx;
+    font-style: italic;
+    margin: 6rpx 36rpx;
+}
+
+.rmb .add-list {
+    background-color: #f5f5f5;
+    border: 1rpx solid #e4e7ed;
+    border-radius: 24rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 12rpx 36rpx;
+    max-height: 300rpx;
+    min-height: 100rpx;
+    overflow-y: scroll;
+    padding: 24rpx 0;
+}
+
+.rmb .add-list .item {
+    box-sizing: border-box;
+    font-size: 36rpx;
+    margin-bottom: 12rpx;
+    text-align: center;
+    width: 33.33%;
+}
+
+.rmb .add-list .item .img {
+    max-height: 100rpx;
+}
+
+.rmb .add-list .item .img.coin {
+    width: 100rpx;
+}
+
+.rmb .add-list .item .img.paper {
+    width: 200rpx;
+}
+
+.rmb .list {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rmb .list .item {
+    font-size: 36rpx;
+    text-align: center;
+    width: 33.33%;
+}
+
+.rmb .list .item:not(:last-child) {
+    margin-bottom: 6rpx;
+}
+
+.rmb .list .item .img.coin {
+    width: 100rpx;
+}
+
+.rmb .list .item .img.paper {
+    width: 200rpx;
+}
+
+.rmb .submit-btn {
+    padding: 0 24rpx;
+}
+
+.rmb .share {
+    padding: 24rpx;
+}
+
+.rmb .share .icon {
+    margin-right: 8rpx;
+}
+
+.rmb .share .share-over {
+    background: transparent;
+}
+
+.rmb .footer {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 10075;
+}
+
+.rmb .answer-result .line {
+    align-items: center;
+    display: flex;
+}

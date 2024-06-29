@@ -1,0 +1,92 @@
+.safe-area-inset-bottom.data-v-e00ebf8c {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.radius-box.data-v-e00ebf8c {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 4rpx 10rpx 0 rgba(0,0,0,.05);
+    margin: 24rpx;
+    overflow: auto;
+    padding: 24rpx;
+}
+
+.radius-box.data-v-e00ebf8c:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-title.data-v-e00ebf8c {
+    color: #303133;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 24rpx;
+    margin-top: 68rpx;
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+}
+
+scroll-view.data-v-e00ebf8c,swiper-item.data-v-e00ebf8c,view.data-v-e00ebf8c {
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.u-tabs__wrapper.data-v-e00ebf8c {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.u-tabs__wrapper__scroll-view-wrapper.data-v-e00ebf8c {
+    flex: 1;
+    overflow: auto hidden;
+}
+
+.u-tabs__wrapper__scroll-view.data-v-e00ebf8c {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.u-tabs__wrapper__nav.data-v-e00ebf8c {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.u-tabs__wrapper__nav__item.data-v-e00ebf8c {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 11px;
+}
+
+.u-tabs__wrapper__nav__item--disabled.data-v-e00ebf8c {
+    cursor: not-allowed;
+}
+
+.u-tabs__wrapper__nav__item__text.data-v-e00ebf8c {
+    color: #606266;
+    font-size: 15px;
+}
+
+.u-tabs__wrapper__nav__item__text--disabled.data-v-e00ebf8c {
+    color: #c8c9cc!important;
+}
+
+.u-tabs__wrapper__nav__line.data-v-e00ebf8c {
+    background-color: #ec8181;
+    border-radius: 100px;
+    bottom: 2px;
+    height: 3px;
+    position: absolute;
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    width: 30px;
+}

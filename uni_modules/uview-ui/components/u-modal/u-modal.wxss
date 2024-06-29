@@ -1,0 +1,100 @@
+.safe-area-inset-bottom.data-v-b57ab03a {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.radius-box.data-v-b57ab03a {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 4rpx 10rpx 0 rgba(0,0,0,.05);
+    margin: 24rpx;
+    overflow: auto;
+    padding: 24rpx;
+}
+
+.radius-box.data-v-b57ab03a:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-title.data-v-b57ab03a {
+    color: #303133;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 24rpx;
+    margin-top: 68rpx;
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+}
+
+scroll-view.data-v-b57ab03a,swiper-item.data-v-b57ab03a,view.data-v-b57ab03a {
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.u-modal.data-v-b57ab03a {
+    border-radius: 6px;
+    overflow: hidden;
+    width: 650rpx;
+}
+
+.u-modal__title.data-v-b57ab03a {
+    color: #606266;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.u-modal__content.data-v-b57ab03a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px 25px 25px;
+}
+
+.u-modal__content__text.data-v-b57ab03a {
+    color: #606266;
+    flex: 1;
+    font-size: 15px;
+}
+
+.u-modal__button-group.data-v-b57ab03a {
+    display: flex;
+    flex-direction: row;
+}
+
+.u-modal__button-group--confirm-button.data-v-b57ab03a {
+    flex-direction: column;
+    padding: 0 25px 15px;
+}
+
+.u-modal__button-group__wrapper.data-v-b57ab03a {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 48px;
+    justify-content: center;
+}
+
+.u-modal__button-group__wrapper--confirm.data-v-b57ab03a,.u-modal__button-group__wrapper--only-cancel.data-v-b57ab03a {
+    border-bottom-right-radius: 6px;
+}
+
+.u-modal__button-group__wrapper--cancel.data-v-b57ab03a,.u-modal__button-group__wrapper--only-confirm.data-v-b57ab03a {
+    border-bottom-left-radius: 6px;
+}
+
+.u-modal__button-group__wrapper--hover.data-v-b57ab03a {
+    background-color: #eaeaea;
+}
+
+.u-modal__button-group__wrapper__text.data-v-b57ab03a {
+    color: #606266;
+    font-size: 16px;
+    text-align: center;
+}

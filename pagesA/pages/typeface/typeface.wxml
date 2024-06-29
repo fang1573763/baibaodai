@@ -1,0 +1,38 @@
+<import src="../../template.wxml"></import>
+<view class="bg-gray">
+    <view class="padding">
+        <view class="cu-form-group bg-white" style="border-radius:20rpx">
+            <textarea bindinput="bindKeyInput" disabled="{{modalName!=null}}" maxlength="-1" placeholder="输入需转换的文字，点击下方字体会自动转换" value="{{textareaValue}}"></textarea>
+        </view>
+    </view>
+    <template is="change" data></template>
+    <scroll-view scrollY class="bg-white" style="height: calc(100% - 380rpx);position:fixed; bottom: 0;left: 0;">
+      <ad unit-id="广告1"></ad>
+        <view class="bottom-change-list">
+            <view class="bottom-change-list__box">
+                
+                <button bindtap="changeText" id="tmw1"> 藤蔓文1</button>
+                <button bindtap="changeText" id="tmw2"> 藤蔓文2</button>
+                <button bindtap="changeText" id="tmw3"> 藤蔓文3</button>
+                <button bindtap="changeText" id="jhw"> 菊花文</button>
+                <button bindtap="changeText" id="hbw"> 花边文</button>
+                <button bindtap="changeText" id="ctw"> 草头文</button>
+                <button bindtap="changeText" id="blw"> 波浪文</button>
+                <button bindtap="changeText" id="myw"> 萌芽文</button>
+                <button bindtap="changeText" id="sbw"> 水波文</button>
+                <button bindtap="changeText" id="htw"> 横条文</button>
+                <button bindtap="changeText" id="shtw"> 双横条文</button>
+                <button bindtap="changeText" id="kaw"> 可爱文</button>
+                <button bindtap="changeText" id="pgyw"> 蒲公英文</button>
+                <button bindtap="changeText" id="lhz"> 流汗文</button>
+                <button bindtap="changeText" id="fnw"> 飞鸟文</button>
+                <button bindtap="changeText" id="yfw"> 音符文</button>
+                <button bindtap="changeText" id="mlw"> ℳℓ文</button>
+                <button bindtap="changeText" id="mtz"> 毛体字</button>
+                <button bindtap="changeText" id="scx"> 删除线</button>
+                <button bindtap="changeText" id="xhx"> 下划线</button>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<view></view>

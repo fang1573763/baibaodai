@@ -1,0 +1,6 @@
+<form bindsubmit="getLink">
+  <textarea name="link" confirm-type="done" placeholder="粘贴公众号推送链接..." value="{{link}}"></textarea>
+  <button type="primary" form-type="submit">获取</button>
+</form>
+
+<button type="primary" open-type="contact">反馈</button>

@@ -1,0 +1,89 @@
+page {
+    background-color:  #fff;
+}
+
+.bottom-change-list {
+    font-size: 24rpx;
+    width: 100%;
+    overflow: hidden;
+ 
+}
+.weui-text-bar__cancel-btn {
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    font-size: 28rpx;
+    height: 180rpx;
+    margin: 5rpx 0;
+    padding: 5rpx;
+    width: 100%;
+}
+.swiper-tab {
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+}
+
+.swiper-tab-item {
+    flex: 1;
+    text-align: center;
+    font-size: 34rpx;
+    height: 90rpx;
+    color: #000;
+    line-height: 90rpx;
+}
+
+.active {
+    border-bottom: 2px solid #000;
+}
+
+swiper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    margin-top: 90rpx,;
+}
+
+swiper-item {
+    overflow: scroll;
+}
+
+.active {
+    color: #000;
+}
+
+.zf__title {
+    margin: 20rpx;
+    text-align: center;
+    line-height: 24rpx;
+    font-size: 24rpx;
+    color: #000;
+    display: block;
+    width: 100%;
+}
+
+.zf__box {
+    overflow: scroll;
+    float: left;
+}
+
+.zf__box button {
+    position: relative;
+    display: inline-block;
+    height: 84rpx;
+    width: 84rpx;
+    padding: 0;
+    margin: 5rpx;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 36rpx;
+    border: 0;
+    box-shadow: 0 1px 3px rgba(54, 53, 53, 0.945);
+}

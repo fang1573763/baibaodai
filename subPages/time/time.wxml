@@ -1,0 +1,29 @@
+<view class="{{['time',isDark?'dark':'']}}">
+    <view class="dashboard">
+        <image class="bg" mode="widthFix" src="../../static/time.png"></image>
+        <image class="hour" src="../../static/hour.png" style="{{'transform:'+rotateHour+';'}}"></image>
+        <image class="minute" src="../../static/minute.png" style="{{'transform:'+rotateMinute+';'}}"></image>
+    </view>
+    <view class="result">{{formatTime}}</view>
+    <view class="slider-box">
+        <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'minus',['$event'] ] ] ] ]}}" hoverClass="u-hover-class">-</view>
+        <view class="slider">
+            <u-slider activeColor="#ec8181" bind:__l="__l" bind:changing="__e" bind:input="__e" blockColor="#ec8181" blockSize="{{28}}" data-event-opts="{{[ [ '^changing',[ ['slideChangeing'] ] ],[ '^input',[ [ '__set_model',[ '','slideValue','$event',[] ] ] ] ] ]}}" max="{{max}}" min="0" showValue="{{false}}" step="1" value="{{slideValue}}" vueId="455d8554-1"></u-slider>
+        </view>
+        <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'add',['$event'] ] ] ] ]}}" hoverClass="u-hover-class">+</view>
+    </view>
+    <view class="tips">滑动滑块，观察时针分针的指向与对应的时间</view>
+    <view class="type">{{''+(type==12?'12小时制':'24小时制')+''}}<view class="exchange">
+            <u-button bind:__l="__l" bind:click="__e" color="#ec8181" data-event-opts="{{[ [ '^click',[ ['changeType'] ] ] ]}}" plain="{{true}}" size="mini" type="primary" vueId="455d8554-2" vueSlots="{{['default']}}">切换</u-button>
+        </view>
+    </view>
+    <view style="margin:24rpx;">
+        <u-button bind:__l="__l" color="#ff4444" openType="share" plain="{{true}}" size="large" type="primary" vueId="455d8554-3" vueSlots="{{['default']}}">
+            <u-icon bind:__l="__l" color="#ff4444" name="share-square" size="36rpx" vueId="{{'455d8554-4'+','+'455d8554-3'}}"></u-icon>
+            <text>分享给同学们</text>
+        </u-button>
+    </view>
+    <view style="margin:24rpx;">
+        <ad-custom adIntervals="30" bind:__l="__l" unitId="adunit-944204fb5a3e8172" vueId="455d8554-5"></ad-custom>
+    </view>
+</view>

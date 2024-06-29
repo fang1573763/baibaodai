@@ -1,0 +1,17 @@
+<view bindtap="__e" class="u-notice data-v-30156c80" data-event-opts="{{[ [ 'tap',[ [ 'clickHandler',['$event'] ] ] ] ]}}">
+    <slot name="icon" wx:if="{{$slots.icon}}"></slot>
+    <block wx:else>
+        <view class="u-notice__left-icon data-v-30156c80" wx:if="{{icon}}">
+            <u-icon bind:__l="__l" class="data-v-30156c80" color="{{color}}" name="{{icon}}" size="19" vueId="3f68550d-1"></u-icon>
+        </view>
+    </block>
+    <swiper autoplay="{{true}}" bindchange="__e" circular="{{true}}" class="u-notice__swiper data-v-30156c80" data-event-opts="{{[ [ 'change',[ [ 'noticeChange',['$event'] ] ] ] ]}}" disableTouch="{{disableTouch}}" interval="{{duration}}" vertical="{{step?false:true}}">
+        <swiper-item class="u-notice__swiper__item data-v-30156c80" wx:for="{{text}}" wx:key="index">
+            <text class="u-notice__swiper__item__text u-line-1 data-v-30156c80" style="{{$root.s0}}">{{item}}</text>
+        </swiper-item>
+    </swiper>
+    <view class="u-notice__right-icon data-v-30156c80" wx:if="{{$root.g0}}">
+        <u-icon bind:__l="__l" class="data-v-30156c80" color="{{color}}" name="arrow-right" size="{{17}}" vueId="3f68550d-2" wx:if="{{mode==='link'}}"></u-icon>
+        <u-icon bind:__l="__l" bind:click="__e" class="data-v-30156c80" color="{{color}}" data-event-opts="{{[ [ '^click',[ ['close'] ] ] ]}}" name="close" size="{{16}}" vueId="3f68550d-3" wx:if="{{mode==='closable'}}"></u-icon>
+    </view>
+</view>
